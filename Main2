@@ -1,0 +1,7 @@
+if getgenv().Language == "Vietnamese" then
+    getgenv().Team = "Marines"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/refs/heads/main/VxezeHubVietNamese"))()
+elseif getgenv().Language == "English" then
+    getgenv().Team = "Marines"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/refs/heads/main/VxezeHubEnglish"))()
+end
