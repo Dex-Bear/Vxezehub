@@ -6,4 +6,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/ref
 elseif placeId == 116495829188952 or placeId == 70876832253163 then
 --DeadRails
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/refs/heads/main/VxezeHubDeadRails"))()
+elseif placeId == 18687417158 then
+--Forsaken
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/refs/heads/main/VxezeHubForsaken.lua"))()
 end
