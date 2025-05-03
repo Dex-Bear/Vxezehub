@@ -2,9 +2,6 @@ if (game:GetService("CoreGui")):FindFirstChild("VxezeHub") and (game:GetService(
 	(game:GetService("CoreGui")).VxezeHub:Destroy();
 	(game:GetService("CoreGui")).ScreenGui:Destroy();
 end;
-_G.Primary = Color3.fromRGB(100, 100, 100);
-_G.Dark = Color3.fromRGB(22, 22, 26);
-_G.Third = Color3.fromRGB(255, 255, 255);
 function CreateRounded(Parent, Size)
 	local Rounded = Instance.new("UICorner");
 	Rounded.Name = "Rounded";
@@ -49,34 +46,42 @@ function MakeDraggable(topbarobject, object)
 		end;
 	end);
 end;
-local ScreenGui = Instance.new("ScreenGui");
-ScreenGui.Parent = game.CoreGui;
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling;
-local OutlineButton = Instance.new("Frame");
-OutlineButton.Name = "OutlineButton";
-OutlineButton.Parent = ScreenGui;
-OutlineButton.ClipsDescendants = true;
-OutlineButton.BackgroundColor3 = _G.Dark;
-OutlineButton.BackgroundTransparency = 0;
-OutlineButton.Position = UDim2.new(0, 10, 0, 10);
-OutlineButton.Size = UDim2.new(0, 50, 0, 50);
-CreateRounded(OutlineButton, 12);
-local ImageButton = Instance.new("ImageButton");
-ImageButton.Parent = OutlineButton;
-ImageButton.Position = UDim2.new(0.5, 0, 0.5, 0);
-ImageButton.Size = UDim2.new(0, 40, 0, 40);
-ImageButton.AnchorPoint = Vector2.new(0.5, 0.5);
-ImageButton.BackgroundColor3 = _G.Dark;
-ImageButton.ImageColor3 = Color3.fromRGB(250, 250, 250);
-ImageButton.ImageTransparency = 0;
-ImageButton.BackgroundTransparency = 0;
-ImageButton.Image = "rbxassetid://91347148253026";
-ImageButton.AutoButtonColor = false;
-MakeDraggable(ImageButton, OutlineButton);
-CreateRounded(ImageButton, 10);
-ImageButton.MouseButton1Click:connect(function()
-	(game.CoreGui:FindFirstChild("VxezeHub")).Enabled = not (game.CoreGui:FindFirstChild("VxezeHub")).Enabled;
-end);
+local Players = game:GetService("Players")
+local ContentProvider = game:GetService("ContentProvider")
+local playerGui = Players.LocalPlayer:WaitForChild("PlayerGui")
+local existingGui = playerGui:FindFirstChild("CustomScreenGui")
+if existingGui then
+    existingGui:Destroy()
+end
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "CustomScreenGui"
+ScreenGui.Parent = playerGui
+local Button = Instance.new("ImageButton")
+Button.Name = "CustomButton"
+Button.Parent = ScreenGui
+Button.Size = UDim2.new(0, 50, 0, 50)
+Button.Position = UDim2.new(0.015, 0, 0.02, 20)
+Button.BackgroundTransparency = 1
+Button.Image = "rbxassetid://91347148253026"
+local UICorner = Instance.new("UICorner")
+UICorner.CornerRadius = UDim.new(1, 0)
+UICorner.Parent = Button
+local imageLoaded = false
+ContentProvider:PreloadAsync({Button.Image}, function()
+    imageLoaded = true
+end)
+Button.MouseButton1Click:Connect(function()
+    if not imageLoaded then
+        return
+    end
+    local VirtualInputManager = game:GetService("VirtualInputManager")
+    if VirtualInputManager then
+        task.defer(function()
+            VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.LeftControl, false, game)
+            VirtualInputManager:SendKeyEvent(false, Enum.KeyCode.LeftControl, false, game)
+        end)
+    end
+end)
 local NotificationFrame = Instance.new("ScreenGui");
 NotificationFrame.Name = "NotificationFrame";
 NotificationFrame.Parent = game.CoreGui;
@@ -157,103 +162,7 @@ function Update:Notify(desc)
 		title
 	});
 end;
-function Update:StartLoad()
-	local Loader = Instance.new("ScreenGui");
-	Loader.Parent = game.CoreGui;
-	Loader.ZIndexBehavior = Enum.ZIndexBehavior.Global;
-	Loader.DisplayOrder = 1000;
-	local LoaderFrame = Instance.new("Frame");
-	LoaderFrame.Name = "LoaderFrame";
-	LoaderFrame.Parent = Loader;
-	LoaderFrame.ClipsDescendants = true;
-	LoaderFrame.BackgroundColor3 = Color3.fromRGB(5, 5, 5);
-	LoaderFrame.BackgroundTransparency = 0;
-	LoaderFrame.AnchorPoint = Vector2.new(0.5, 0.5);
-	LoaderFrame.Position = UDim2.new(0.5, 0, 0.5, 0);
-	LoaderFrame.Size = UDim2.new(1.5, 0, 1.5, 0);
-	LoaderFrame.BorderSizePixel = 0;
-	local MainLoaderFrame = Instance.new("Frame");
-	MainLoaderFrame.Name = "MainLoaderFrame";
-	MainLoaderFrame.Parent = LoaderFrame;
-	MainLoaderFrame.ClipsDescendants = true;
-	MainLoaderFrame.BackgroundColor3 = Color3.fromRGB(5, 5, 5);
-	MainLoaderFrame.BackgroundTransparency = 0;
-	MainLoaderFrame.AnchorPoint = Vector2.new(0.5, 0.5);
-	MainLoaderFrame.Position = UDim2.new(0.5, 0, 0.5, 0);
-	MainLoaderFrame.Size = UDim2.new(0.5, 0, 0.5, 0);
-	MainLoaderFrame.BorderSizePixel = 0;
-	local TitleLoader = Instance.new("TextLabel");
-	TitleLoader.Parent = MainLoaderFrame;
-	TitleLoader.Text = "Vxeze Hub";
-	TitleLoader.Font = Enum.Font.FredokaOne;
-	TitleLoader.TextSize = 50;
-	TitleLoader.TextColor3 = Color3.fromRGB(255, 255, 255);
-	TitleLoader.BackgroundTransparency = 1;
-	TitleLoader.AnchorPoint = Vector2.new(0.5, 0.5);
-	TitleLoader.Position = UDim2.new(0.5, 0, 0.3, 0);
-	TitleLoader.Size = UDim2.new(0.8, 0, 0.2, 0);
-	TitleLoader.TextTransparency = 0;
-	local DescriptionLoader = Instance.new("TextLabel");
-	DescriptionLoader.Parent = MainLoaderFrame;
-	DescriptionLoader.Text = "Loading..";
-	DescriptionLoader.Font = Enum.Font.Gotham;
-	DescriptionLoader.TextSize = 15;
-	DescriptionLoader.TextColor3 = Color3.fromRGB(255, 255, 255);
-	DescriptionLoader.BackgroundTransparency = 1;
-	DescriptionLoader.AnchorPoint = Vector2.new(0.5, 0.5);
-	DescriptionLoader.Position = UDim2.new(0.5, 0, 0.6, 0);
-	DescriptionLoader.Size = UDim2.new(0.8, 0, 0.2, 0);
-	DescriptionLoader.TextTransparency = 0;
-	local LoadingBarBackground = Instance.new("Frame");
-	LoadingBarBackground.Parent = MainLoaderFrame;
-	LoadingBarBackground.BackgroundColor3 = Color3.fromRGB(50, 50, 50);
-	LoadingBarBackground.AnchorPoint = Vector2.new(0.5, 0.5);
-	LoadingBarBackground.Position = UDim2.new(0.5, 0, 0.7, 0);
-	LoadingBarBackground.Size = UDim2.new(0.7, 0, 0.05, 0);
-	LoadingBarBackground.ClipsDescendants = true;
-	LoadingBarBackground.BorderSizePixel = 0;
-	LoadingBarBackground.ZIndex = 2;
-	local LoadingBar = Instance.new("Frame");
-	LoadingBar.Parent = LoadingBarBackground;
-	LoadingBar.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
-	LoadingBar.Size = UDim2.new(0, 0, 1, 0);
-	LoadingBar.ZIndex = 3;
-	CreateRounded(LoadingBarBackground, 20);
-	CreateRounded(LoadingBar, 20);
-	local tweenService = game:GetService("TweenService");
-	local dotCount = 0;
-	local running = true;
-	local barTweenInfoPart1 = TweenInfo.new(0.5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out);
-	local barTweenPart1 = tweenService:Create(LoadingBar, barTweenInfoPart1, {
-		Size = UDim2.new(0.25, 0, 1, 0)
-	});
-	local barTweenInfoPart2 = TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out);
-	local barTweenPart2 = tweenService:Create(LoadingBar, barTweenInfoPart2, {
-		Size = UDim2.new(1, 0, 1, 0)
-	});
-	barTweenPart1:Play();
-	function Update:Loaded()
-		barTweenPart2:Play();
-	end;
-	barTweenPart1.Completed:Connect(function()
-		running = true;
-		barTweenPart2.Completed:Connect(function()
-			wait(1);
-			running = false;
-			DescriptionLoader.Text = "Loaded!";
-			wait(0.5);
-			Loader:Destroy();
-		end);
-	end);
-	spawn(function()
-		while running do
-			dotCount = (dotCount + 1) % 4;
-			local dots = string.rep(".", dotCount);
-			DescriptionLoader.Text = "Please wait" .. dots;
-			wait(0.5);
-		end;
-	end);
-end;
+
 local SettingsLib = {
 	SaveSettings = true,
 	LoadAnimation = true
