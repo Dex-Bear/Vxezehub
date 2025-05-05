@@ -12,4 +12,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/ref
 elseif placeId == 87039211657390 then
 --AriseCrossover
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/refs/heads/main/VxezeHubAriseCrossover.lua"))()
+elseif placeId == 126884695634066 then
+--GrowAGarden
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/refs/heads/main/VxezeHubGrowAGarden.lua"))()
 end
