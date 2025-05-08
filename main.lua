@@ -993,7 +993,7 @@ function Update:Window(Config)
 				Desc.Visible = false;
 				Button.Size = UDim2.new(1, 0, 0, 36);
 			end;
-			Desc.TextColor3 = Color3.fromRGB(0, 0, 0);
+			Desc.TextColor3 = Color3.fromRGB(255, 255, 255);
 			Desc.TextSize = 10;
 			Desc.TextXAlignment = Enum.TextXAlignment.Left;
 			ToggleFrame.Name = "ToggleFrame";
