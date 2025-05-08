@@ -566,7 +566,7 @@ function Update:Window(Config)
 		end);
 		if checked then
 			Checkbox.ImageTransparency = 0;
-			Checkbox.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+			Checkbox.BackgroundColor3 = Color3.fromRGB(0, 0, 0);
 		else
 			Checkbox.ImageTransparency = 1;
 			Checkbox.BackgroundColor3 = Color3.fromRGB(100, 100, 100);
