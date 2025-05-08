@@ -993,7 +993,7 @@ function Update:Window(Config)
 				Desc.Visible = false;
 				Button.Size = UDim2.new(1, 0, 0, 36);
 			end;
-			Desc.TextColor3 = Color3.fromRGB(150, 150, 150);
+			Desc.TextColor3 = Color3.fromRGB(0, 0, 0);
 			Desc.TextSize = 10;
 			Desc.TextXAlignment = Enum.TextXAlignment.Left;
 			ToggleFrame.Name = "ToggleFrame";
@@ -1017,7 +1017,7 @@ function Update:Window(Config)
 			CreateRounded(ToggleImage, 10);
 			Circle.Name = "Circle";
 			Circle.Parent = ToggleImage;
-			Circle.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+			Circle.BackgroundColor3 = Color3.fromRGB(0, 0, 0);
 			Circle.BackgroundTransparency = 0;
 			Circle.Position = UDim2.new(0, 3, 0.5, 0);
 			Circle.Size = UDim2.new(0, 14, 0, 14);
@@ -1610,3 +1610,5 @@ function Update:Window(Config)
 	return uitab;
 end;
 return Update;
+
+
