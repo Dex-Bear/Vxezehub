@@ -560,7 +560,7 @@ function Update:Window(Config)
 				Checkbox.BackgroundColor3 = Color3.fromRGB(0, 0, 0);
 			else
 				Checkbox.ImageTransparency = 1;
-				Checkbox.BackgroundColor3 = Color3.fromRGB(0, 0, 0);
+				Checkbox.BackgroundColor3 = Color3.fromRGB(100, 100, 100);
 			end;
 			pcall(callback, checked);
 		end);
@@ -569,7 +569,7 @@ function Update:Window(Config)
 			Checkbox.BackgroundColor3 = Color3.fromRGB(0, 0, 0);
 		else
 			Checkbox.ImageTransparency = 1;
-			Checkbox.BackgroundColor3 = Color3.fromRGB(0, 0, 0);
+			Checkbox.BackgroundColor3 = Color3.fromRGB(100, 100, 100);
 		end;
 		pcall(callback, checked);
 	end;
