@@ -127,7 +127,7 @@ function Update:Notify(desc)
 	Image.BackgroundTransparency = 1;
 	Image.Position = UDim2.new(0, 8, 0, 8);
 	Image.Size = UDim2.new(0, 45, 0, 45);
-	Image.Image = "rbxassetid://13940080072";
+	Image.Image = "rbxassetid://91347148253026";
 	Title.Parent = Frame;
 	Title.BackgroundColor3 = _G.Primary;
 	Title.BackgroundTransparency = 1;
@@ -531,7 +531,7 @@ function Update:Window(Config)
 		local Title = Instance.new("TextLabel");
 		Title.Name = "Title";
 		Title.Parent = Background;
-		Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+		Title.BackgroundColor3 = Color3.fromRGB(0, 0, 0);
 		Title.BackgroundTransparency = 1;
 		Title.Position = UDim2.new(0, 60, 0.5, 0);
 		Title.Size = UDim2.new(1, -60, 0, 20);
@@ -549,7 +549,7 @@ function Update:Window(Config)
 		Checkbox.AnchorPoint = Vector2.new(0, 0.5);
 		Checkbox.Position = UDim2.new(0, 30, 0.5, 0);
 		Checkbox.Size = UDim2.new(0, 20, 0, 20);
-		Checkbox.Image = "rbxassetid://91347148253026";
+		Checkbox.Image = "rbxassetid://10709790644";
 		Checkbox.ImageTransparency = 1;
 		Checkbox.ImageColor3 = Color3.fromRGB(245, 245, 245);
 		CreateRounded(Checkbox, 5);
@@ -557,7 +557,7 @@ function Update:Window(Config)
 			checked = not checked;
 			if checked then
 				Checkbox.ImageTransparency = 0;
-				Checkbox.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+				Checkbox.BackgroundColor3 = Color3.fromRGB(0, 0, 0);
 			else
 				Checkbox.ImageTransparency = 1;
 				Checkbox.BackgroundColor3 = Color3.fromRGB(100, 100, 100);
