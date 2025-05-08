@@ -531,7 +531,7 @@ function Update:Window(Config)
 		local Title = Instance.new("TextLabel");
 		Title.Name = "Title";
 		Title.Parent = Background;
-		Title.BackgroundColor3 = Color3.fromRGB(0, 0, 0);
+		Title.BackgroundColor3 = Color3.fromRGB(100, 100, 100);
 		Title.BackgroundTransparency = 1;
 		Title.Position = UDim2.new(0, 60, 0.5, 0);
 		Title.Size = UDim2.new(1, -60, 0, 20);
