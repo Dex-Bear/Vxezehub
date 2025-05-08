@@ -1554,7 +1554,7 @@ function Update:Window(Config)
 			Sep1.Font = Enum.Font.GothamBold;
 			Sep1.RichText = true;
 			Sep1.Text = "<font color=\"rgb(255, 255, 255)\">〉</font>〉";
-			Sep1.TextColor3 = Color3.fromRGB(0, 0, 0);
+			Sep1.TextColor3 = Color3.fromRGB(255, 255, 255);
 			Sep1.TextSize = 14;
 			Sep2.Name = "Sep2";
 			Sep2.Parent = Seperator;
@@ -1577,7 +1577,7 @@ function Update:Window(Config)
 			Sep3.Font = Enum.Font.GothamBold;
 			Sep3.RichText = true;
 			Sep3.Text = "<font color=\"rgb(255, 255, 255)\">〈</font>〈";
-			Sep3.TextColor3 = Color3.fromRGB(0, 0, 0);
+			Sep3.TextColor3 = Color3.fromRGB(255, 255, 255);
 			Sep3.TextSize = 14;
 		end;
 		function main:Line()
