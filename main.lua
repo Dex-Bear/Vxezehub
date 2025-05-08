@@ -591,7 +591,7 @@ function Update:Window(Config)
 		Button.Text = title or "Button";
 		Button.AnchorPoint = Vector2.new(0.5, 0);
 		Button.Position = UDim2.new(0.5, 0, 0, 0);
-		Button.TextColor3 = Color3.fromRGB(255, 255, 255);
+		Button.TextColor3 = Color3.fromRGB(0, 0, 0);
 		Button.TextSize = 15;
 		Button.AutoButtonColor = false;
 		Button.MouseButton1Click:Connect(function()
