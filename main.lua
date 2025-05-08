@@ -49,32 +49,60 @@ function MakeDraggable(topbarobject, object)
 		end;
 	end);
 end;
-local ScreenGui = Instance.new("ScreenGui");
-ScreenGui.Parent = game.CoreGui;
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling;
-local OutlineButton = Instance.new("Frame");
-OutlineButton.Name = "OutlineButton";
-OutlineButton.Parent = ScreenGui;
-OutlineButton.ClipsDescendants = true;
-OutlineButton.BackgroundColor3 = _G.Dark;
-OutlineButton.BackgroundTransparency = 0;
-OutlineButton.Position = UDim2.new(0, 10, 0, 10);
-OutlineButton.Size = UDim2.new(0, 50, 0, 50);
-CreateRounded(OutlineButton, 12);
-local ImageButton = Instance.new("ImageButton");
-ImageButton.Parent = OutlineButton;
-ImageButton.Position = UDim2.new(0.5, 0, 0.5, 0);
-ImageButton.Size = UDim2.new(0, 40, 0, 40);
-ImageButton.AnchorPoint = Vector2.new(0.5, 0.5);
-ImageButton.BackgroundColor3 = _G.Dark;
-ImageButton.ImageColor3 = Color3.fromRGB(250, 250, 250);
-ImageButton.ImageTransparency = 0;
-ImageButton.BackgroundTransparency = 0;
-ImageButton.Image = "rbxassetid://91347148253026";
-ImageButton.AutoButtonColor = false;
-MakeDraggable(ImageButton, OutlineButton);
-CreateRounded(ImageButton, 10);
-ImageButton.MouseButton1Click:connect(function()
+local Players = game:GetService("Players")
+local ContentProvider = game:GetService("ContentProvider")
+local VirtualInputManager = game:GetService("VirtualInputManager")
+local playerGui = Players.LocalPlayer:WaitForChild("PlayerGui")
+
+local existingGui = playerGui:FindFirstChild("CustomScreenGui")
+if existingGui then
+    existingGui:Destroy()
+end
+
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "CustomScreenGui"
+ScreenGui.Parent = playerGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+local OutlineButton = Instance.new("Frame")
+OutlineButton.Name = "OutlineButton"
+OutlineButton.Parent = ScreenGui
+OutlineButton.ClipsDescendants = true
+OutlineButton.BackgroundColor3 = _G.Dark
+OutlineButton.BackgroundTransparency = 0
+OutlineButton.Position = UDim2.new(0.015, 0, 0.02, 20)
+OutlineButton.Size = UDim2.new(0, 50, 0, 50)
+CreateRounded(OutlineButton, 12)
+
+local ImageButton = Instance.new("ImageButton")
+ImageButton.Name = "CustomButton"
+ImageButton.Parent = OutlineButton
+ImageButton.Position = UDim2.new(0.5, 0, 0.5, 0)
+ImageButton.Size = UDim2.new(0, 40, 0, 40)
+ImageButton.AnchorPoint = Vector2.new(0.5, 0.5)
+ImageButton.BackgroundColor3 = _G.Dark
+ImageButton.ImageColor3 = Color3.fromRGB(250, 250, 250)
+ImageButton.ImageTransparency = 0
+ImageButton.BackgroundTransparency = 0
+ImageButton.Image = "rbxassetid://91347148253026"
+ImageButton.AutoButtonColor = false
+CreateRounded(ImageButton, 10)
+MakeDraggable(ImageButton, OutlineButton) -- Assuming MakeDraggable is defined
+
+local imageLoaded = false
+ContentProvider:PreloadAsync({ImageButton.Image}, function()
+    imageLoaded = true
+end)
+
+ImageButton.MouseButton1Click:Connect(function()
+    if not imageLoaded then
+        return
+    end
+    task.defer(function()
+        VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.LeftControl, false, game)
+        VirtualInputManager:SendKeyEvent(false, Enum.KeyCode.LeftControl, false, game)
+    end)
+end)
 	(game.CoreGui:FindFirstChild("VxezeHub")).Enabled = not (game.CoreGui:FindFirstChild("VxezeHub")).Enabled;
 end);
 local NotificationFrame = Instance.new("ScreenGui");
@@ -549,7 +577,7 @@ function Update:Window(Config)
 		Checkbox.AnchorPoint = Vector2.new(0, 0.5);
 		Checkbox.Position = UDim2.new(0, 30, 0.5, 0);
 		Checkbox.Size = UDim2.new(0, 20, 0, 20);
-		Checkbox.Image = "rbxassetid://10709790644";
+		Checkbox.Image = "rbxassetid://91347148253026";
 		Checkbox.ImageTransparency = 1;
 		Checkbox.ImageColor3 = Color3.fromRGB(245, 245, 245);
 		CreateRounded(Checkbox, 5);
