@@ -1553,7 +1553,7 @@ function Update:Window(Config)
 			Sep1.Size = UDim2.new(0, 20, 0, 36);
 			Sep1.Font = Enum.Font.GothamBold;
 			Sep1.RichText = true;
-			Sep1.Text = "<font color=\"rgb(255, 255, 255)\">âŒª</font>âŒª";
+			Sep1.Text = "<font color=\"rgb(255, 255, 255)\">〉</font>〉";
 			Sep1.TextColor3 = Color3.fromRGB(0, 0, 0);
 			Sep1.TextSize = 14;
 			Sep2.Name = "Sep2";
@@ -1576,7 +1576,7 @@ function Update:Window(Config)
 			Sep3.Size = UDim2.new(0, 20, 0, 36);
 			Sep3.Font = Enum.Font.GothamBold;
 			Sep3.RichText = true;
-			Sep3.Text = "<font color=\"rgb(255, 255, 255)\">âŒª</font>âŒª";
+			Sep3.Text = "<font color=\"rgb(255, 255, 255)\">〈</font>〈";
 			Sep3.TextColor3 = Color3.fromRGB(0, 0, 0);
 			Sep3.TextSize = 14;
 		end;
