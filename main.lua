@@ -539,19 +539,19 @@ function Update:Window(Config)
 		Title.AnchorPoint = Vector2.new(0, 0.5);
 		Title.Text = title or "";
 		Title.TextSize = 15;
-		Title.TextColor3 = Color3.fromRGB(200, 200, 200);
+		Title.TextColor3 = Color3.fromRGB(255, 255, 255);
 		Title.TextXAlignment = Enum.TextXAlignment.Left;
 		local Checkbox = Instance.new("ImageButton");
 		Checkbox.Name = "Checkbox";
 		Checkbox.Parent = Background;
-		Checkbox.BackgroundColor3 = Color3.fromRGB(100, 100, 100);
+		Checkbox.BackgroundColor3 = Color3.fromRGB(0, 0, 0);
 		Checkbox.BackgroundTransparency = 0;
 		Checkbox.AnchorPoint = Vector2.new(0, 0.5);
 		Checkbox.Position = UDim2.new(0, 30, 0.5, 0);
 		Checkbox.Size = UDim2.new(0, 20, 0, 20);
 		Checkbox.Image = "rbxassetid://10709790644";
 		Checkbox.ImageTransparency = 1;
-		Checkbox.ImageColor3 = Color3.fromRGB(245, 245, 245);
+		Checkbox.ImageColor3 = Color3.fromRGB(255, 255, 255);
 		CreateRounded(Checkbox, 5);
 		Checkbox.MouseButton1Click:Connect(function()
 			checked = not checked;
@@ -560,7 +560,7 @@ function Update:Window(Config)
 				Checkbox.BackgroundColor3 = Color3.fromRGB(0, 0, 0);
 			else
 				Checkbox.ImageTransparency = 1;
-				Checkbox.BackgroundColor3 = Color3.fromRGB(100, 100, 100);
+				Checkbox.BackgroundColor3 = Color3.fromRGB(0, 0, 0);
 			end;
 			pcall(callback, checked);
 		end);
@@ -569,7 +569,7 @@ function Update:Window(Config)
 			Checkbox.BackgroundColor3 = Color3.fromRGB(0, 0, 0);
 		else
 			Checkbox.ImageTransparency = 1;
-			Checkbox.BackgroundColor3 = Color3.fromRGB(100, 100, 100);
+			Checkbox.BackgroundColor3 = Color3.fromRGB(0, 0, 0);
 		end;
 		pcall(callback, checked);
 	end;
