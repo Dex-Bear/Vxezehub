@@ -973,7 +973,7 @@ function Update:Window(Config)
 			Title2.Size = UDim2.new(1, 0, 0, 35);
 			Title2.Font = Enum.Font.Cartoon;
 			Title2.Text = text;
-			Title2.TextColor3 = Color3.fromRGB(0, 0, 0);
+			Title2.TextColor3 = Color3.fromRGB(255, 255, 255);
 			Title2.TextSize = 15;
 			Title2.TextXAlignment = Enum.TextXAlignment.Left;
 			Title2.AnchorPoint = Vector2.new(0, 0.5);
@@ -1017,7 +1017,7 @@ function Update:Window(Config)
 			CreateRounded(ToggleImage, 10);
 			Circle.Name = "Circle";
 			Circle.Parent = ToggleImage;
-			Circle.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+			Circle.BackgroundColor3 = Color3.fromRGB(0, 0, 0);
 			Circle.BackgroundTransparency = 0;
 			Circle.Position = UDim2.new(0, 3, 0.5, 0);
 			Circle.Size = UDim2.new(0, 14, 0, 14);
