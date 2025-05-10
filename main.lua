@@ -1,5 +1,5 @@
-if (game:GetService("CoreGui")):FindFirstChild("VxezeHub") and (game:GetService("CoreGui")):FindFirstChild("ScreenGui") then
-	(game:GetService("CoreGui")).VxezeHub:Destroy();
+if (game:GetService("CoreGui")):FindFirstChild("RelzHub") and (game:GetService("CoreGui")):FindFirstChild("ScreenGui") then
+	(game:GetService("CoreGui")).RelzHub:Destroy();
 	(game:GetService("CoreGui")).ScreenGui:Destroy();
 end;
 _G.Primary = Color3.fromRGB(100, 100, 100);
@@ -75,7 +75,7 @@ ImageButton.AutoButtonColor = false;
 MakeDraggable(ImageButton, OutlineButton);
 CreateRounded(ImageButton, 10);
 ImageButton.MouseButton1Click:connect(function()
-	(game.CoreGui:FindFirstChild("VxezeHub")).Enabled = not (game.CoreGui:FindFirstChild("VxezeHub")).Enabled;
+	(game.CoreGui:FindFirstChild("VxezeHub")).Enabled = not (game.CoreGui:FindFirstChild("RelzHub")).Enabled;
 end);
 local NotificationFrame = Instance.new("ScreenGui");
 NotificationFrame.Name = "NotificationFrame";
@@ -134,7 +134,7 @@ function Update:Notify(desc)
 	Title.Position = UDim2.new(0, 55, 0, 14);
 	Title.Size = UDim2.new(0, 10, 0, 20);
 	Title.Font = Enum.Font.GothamBold;
-	Title.Text = "Vxeze Hub";
+	Title.Text = "Relz Hub";
 	Title.TextColor3 = Color3.fromRGB(255, 255, 255);
 	Title.TextSize = 16;
 	Title.TextXAlignment = Enum.TextXAlignment.Left;
@@ -184,7 +184,7 @@ function Update:StartLoad()
 	MainLoaderFrame.BorderSizePixel = 0;
 	local TitleLoader = Instance.new("TextLabel");
 	TitleLoader.Parent = MainLoaderFrame;
-	TitleLoader.Text = "Vxeze Hub";
+	TitleLoader.Text = "Vxeze Hub [ Free ]";
 	TitleLoader.Font = Enum.Font.FredokaOne;
 	TitleLoader.TextSize = 50;
 	TitleLoader.TextColor3 = Color3.fromRGB(255, 255, 255);
@@ -215,7 +215,7 @@ function Update:StartLoad()
 	LoadingBarBackground.ZIndex = 2;
 	local LoadingBar = Instance.new("Frame");
 	LoadingBar.Parent = LoadingBarBackground;
-	LoadingBar.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+	LoadingBar.BackgroundColor3 = Color3.fromRGB(255, 0, 0);
 	LoadingBar.Size = UDim2.new(0, 0, 1, 0);
 	LoadingBar.ZIndex = 3;
 	CreateRounded(LoadingBarBackground, 20);
@@ -320,13 +320,13 @@ function Update:Window(Config)
 	local currentpage = "";
 	local keybind = keybind or Enum.KeyCode.RightControl;
 	local yoo = string.gsub(tostring(keybind), "Enum.KeyCode.", "");
-	local VxezeHub = Instance.new("ScreenGui");
-	VxezeHub.Name = "VxezeHub";
-	VxezeHub.Parent = game.CoreGui;
-	VxezeHub.DisplayOrder = 999;
+	local RelzHub = Instance.new("ScreenGui");
+	RelzHub.Name = "VxezeHub";
+	RelzHub.Parent = game.CoreGui;
+	RelzHub.DisplayOrder = 999;
 	local OutlineMain = Instance.new("Frame");
 	OutlineMain.Name = "OutlineMain";
-	OutlineMain.Parent = VxezeHub;
+	OutlineMain.Parent = RelzHub;
 	OutlineMain.ClipsDescendants = true;
 	OutlineMain.AnchorPoint = Vector2.new(0.5, 0.5);
 	OutlineMain.BackgroundColor3 = Color3.fromRGB(30, 30, 30);
@@ -378,7 +378,7 @@ function Update:Window(Config)
 	NameHub.AnchorPoint = Vector2.new(0, 0.5);
 	NameHub.Size = UDim2.new(0, 1, 0, 25);
 	NameHub.Font = Enum.Font.GothamBold;
-	NameHub.Text = "Vxeze Hub [ Free ]";
+	NameHub.Text = "Vxeze Hub";
 	NameHub.TextSize = 20;
 	NameHub.TextColor3 = Color3.fromRGB(255, 255, 255);
 	NameHub.TextXAlignment = Enum.TextXAlignment.Left;
@@ -531,7 +531,7 @@ function Update:Window(Config)
 		local Title = Instance.new("TextLabel");
 		Title.Name = "Title";
 		Title.Parent = Background;
-		Title.BackgroundColor3 = Color3.fromRGB(100, 100, 100);
+		Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
 		Title.BackgroundTransparency = 1;
 		Title.Position = UDim2.new(0, 60, 0.5, 0);
 		Title.Size = UDim2.new(1, -60, 0, 20);
@@ -539,12 +539,12 @@ function Update:Window(Config)
 		Title.AnchorPoint = Vector2.new(0, 0.5);
 		Title.Text = title or "";
 		Title.TextSize = 15;
-		Title.TextColor3 = Color3.fromRGB(255, 255, 255);
+		Title.TextColor3 = Color3.fromRGB(200, 200, 200);
 		Title.TextXAlignment = Enum.TextXAlignment.Left;
 		local Checkbox = Instance.new("ImageButton");
 		Checkbox.Name = "Checkbox";
 		Checkbox.Parent = Background;
-		Checkbox.BackgroundColor3 = Color3.fromRGB(0, 0, 0);
+		Checkbox.BackgroundColor3 = Color3.fromRGB(100, 100, 100);
 		Checkbox.BackgroundTransparency = 0;
 		Checkbox.AnchorPoint = Vector2.new(0, 0.5);
 		Checkbox.Position = UDim2.new(0, 30, 0.5, 0);
@@ -993,7 +993,7 @@ function Update:Window(Config)
 				Desc.Visible = false;
 				Button.Size = UDim2.new(1, 0, 0, 36);
 			end;
-			Desc.TextColor3 = Color3.fromRGB(255, 255, 255);
+			Desc.TextColor3 = Color3.fromRGB(250, 250, 250);
 			Desc.TextSize = 10;
 			Desc.TextXAlignment = Enum.TextXAlignment.Left;
 			ToggleFrame.Name = "ToggleFrame";
@@ -1553,7 +1553,7 @@ function Update:Window(Config)
 			Sep1.Size = UDim2.new(0, 20, 0, 36);
 			Sep1.Font = Enum.Font.GothamBold;
 			Sep1.RichText = true;
-			Sep1.Text = "<font color=\"rgb(255, 255, 255)\">〉</font>〉";
+			Sep1.Text = "〉<font color=\"rgb(255, 255, 255)\">〉</font>";
 			Sep1.TextColor3 = Color3.fromRGB(255, 255, 255);
 			Sep1.TextSize = 14;
 			Sep2.Name = "Sep2";
