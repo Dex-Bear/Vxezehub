@@ -184,7 +184,7 @@ function Update:StartLoad()
 	MainLoaderFrame.BorderSizePixel = 0;
 	local TitleLoader = Instance.new("TextLabel");
 	TitleLoader.Parent = MainLoaderFrame;
-	TitleLoader.Text = "Vxeze Hub [ Free ]";
+	TitleLoader.Text = "Vxeze Hub";
 	TitleLoader.Font = Enum.Font.FredokaOne;
 	TitleLoader.TextSize = 50;
 	TitleLoader.TextColor3 = Color3.fromRGB(255, 255, 255);
@@ -215,7 +215,7 @@ function Update:StartLoad()
 	LoadingBarBackground.ZIndex = 2;
 	local LoadingBar = Instance.new("Frame");
 	LoadingBar.Parent = LoadingBarBackground;
-	LoadingBar.BackgroundColor3 = Color3.fromRGB(255, 0, 0);
+	LoadingBar.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
 	LoadingBar.Size = UDim2.new(0, 0, 1, 0);
 	LoadingBar.ZIndex = 3;
 	CreateRounded(LoadingBarBackground, 20);
@@ -378,7 +378,7 @@ function Update:Window(Config)
 	NameHub.AnchorPoint = Vector2.new(0, 0.5);
 	NameHub.Size = UDim2.new(0, 1, 0, 25);
 	NameHub.Font = Enum.Font.GothamBold;
-	NameHub.Text = "Vxeze Hub";
+	NameHub.Text = "Vxeze Hub [ Free ]";
 	NameHub.TextSize = 20;
 	NameHub.TextColor3 = Color3.fromRGB(255, 255, 255);
 	NameHub.TextXAlignment = Enum.TextXAlignment.Left;
@@ -551,7 +551,7 @@ function Update:Window(Config)
 		Checkbox.Size = UDim2.new(0, 20, 0, 20);
 		Checkbox.Image = "rbxassetid://10709790644";
 		Checkbox.ImageTransparency = 1;
-		Checkbox.ImageColor3 = Color3.fromRGB(255, 255, 255);
+		Checkbox.ImageColor3 = Color3.fromRGB(245, 245, 245);
 		CreateRounded(Checkbox, 5);
 		Checkbox.MouseButton1Click:Connect(function()
 			checked = not checked;
@@ -591,7 +591,7 @@ function Update:Window(Config)
 		Button.Text = title or "Button";
 		Button.AnchorPoint = Vector2.new(0.5, 0);
 		Button.Position = UDim2.new(0.5, 0, 0, 0);
-		Button.TextColor3 = Color3.fromRGB(0, 0, 0);
+		Button.TextColor3 = Color3.fromRGB(255, 255, 255);
 		Button.TextSize = 15;
 		Button.AutoButtonColor = false;
 		Button.MouseButton1Click:Connect(function()
@@ -993,7 +993,7 @@ function Update:Window(Config)
 				Desc.Visible = false;
 				Button.Size = UDim2.new(1, 0, 0, 36);
 			end;
-			Desc.TextColor3 = Color3.fromRGB(250, 250, 250);
+			Desc.TextColor3 = Color3.fromRGB(150, 150, 150);
 			Desc.TextSize = 10;
 			Desc.TextXAlignment = Enum.TextXAlignment.Left;
 			ToggleFrame.Name = "ToggleFrame";
@@ -1017,7 +1017,7 @@ function Update:Window(Config)
 			CreateRounded(ToggleImage, 10);
 			Circle.Name = "Circle";
 			Circle.Parent = ToggleImage;
-			Circle.BackgroundColor3 = Color3.fromRGB(0, 0, 0);
+			Circle.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
 			Circle.BackgroundTransparency = 0;
 			Circle.Position = UDim2.new(0, 3, 0.5, 0);
 			Circle.Size = UDim2.new(0, 14, 0, 14);
