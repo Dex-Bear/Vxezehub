@@ -1,5 +1,5 @@
-if (game:GetService("CoreGui")):FindFirstChild("RelzHub") and (game:GetService("CoreGui")):FindFirstChild("ScreenGui") then
-	(game:GetService("CoreGui")).RelzHub:Destroy();
+if (game:GetService("CoreGui")):FindFirstChild("VxezeHub") and (game:GetService("CoreGui")):FindFirstChild("ScreenGui") then
+	(game:GetService("CoreGui")).VxezeHub:Destroy();
 	(game:GetService("CoreGui")).ScreenGui:Destroy();
 end;
 _G.Primary = Color3.fromRGB(100, 100, 100);
@@ -75,7 +75,7 @@ ImageButton.AutoButtonColor = false;
 MakeDraggable(ImageButton, OutlineButton);
 CreateRounded(ImageButton, 10);
 ImageButton.MouseButton1Click:connect(function()
-	(game.CoreGui:FindFirstChild("VxezeHub")).Enabled = not (game.CoreGui:FindFirstChild("RelzHub")).Enabled;
+	(game.CoreGui:FindFirstChild("VxezeHub")).Enabled = not (game.CoreGui:FindFirstChild("VxezeHub")).Enabled;
 end);
 local NotificationFrame = Instance.new("ScreenGui");
 NotificationFrame.Name = "NotificationFrame";
@@ -134,7 +134,7 @@ function Update:Notify(desc)
 	Title.Position = UDim2.new(0, 55, 0, 14);
 	Title.Size = UDim2.new(0, 10, 0, 20);
 	Title.Font = Enum.Font.GothamBold;
-	Title.Text = "Relz Hub";
+	Title.Text = "Vxeze Hub";
 	Title.TextColor3 = Color3.fromRGB(255, 255, 255);
 	Title.TextSize = 16;
 	Title.TextXAlignment = Enum.TextXAlignment.Left;
@@ -320,13 +320,13 @@ function Update:Window(Config)
 	local currentpage = "";
 	local keybind = keybind or Enum.KeyCode.RightControl;
 	local yoo = string.gsub(tostring(keybind), "Enum.KeyCode.", "");
-	local RelzHub = Instance.new("ScreenGui");
-	RelzHub.Name = "VxezeHub";
-	RelzHub.Parent = game.CoreGui;
-	RelzHub.DisplayOrder = 999;
+	local VxezeHub = Instance.new("ScreenGui");
+	VxezeHub.Name = "VxezeHub";
+	VxezeHub.Parent = game.CoreGui;
+	VxezeHub.DisplayOrder = 999;
 	local OutlineMain = Instance.new("Frame");
 	OutlineMain.Name = "OutlineMain";
-	OutlineMain.Parent = RelzHub;
+	OutlineMain.Parent = VxezeHub;
 	OutlineMain.ClipsDescendants = true;
 	OutlineMain.AnchorPoint = Vector2.new(0.5, 0.5);
 	OutlineMain.BackgroundColor3 = Color3.fromRGB(30, 30, 30);
