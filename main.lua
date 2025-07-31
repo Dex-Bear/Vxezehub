@@ -1472,7 +1472,7 @@ function Update:Window(Config)
 			TextboxLabel.Size = UDim2.new(1, 0, 0, 35);
 			TextboxLabel.Font = Enum.Font.Nunito;
 			TextboxLabel.AnchorPoint = Vector2.new(0, 0.5);
-			TextboxLabel.TextColor3 = Color3.fromRGB(255, 255, 255);
+			TextboxLabel.TextColor3 = Color3.fromRGB(0, 0, 0);
 			TextboxLabel.TextSize = 15;
 			TextboxLabel.TextTransparency = 0;
 			TextboxLabel.TextXAlignment = Enum.TextXAlignment.Left;
