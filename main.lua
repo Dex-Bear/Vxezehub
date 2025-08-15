@@ -127,7 +127,7 @@ function Update:Notify(desc)
 	Image.BackgroundTransparency = 1;
 	Image.Position = UDim2.new(0, 8, 0, 8);
 	Image.Size = UDim2.new(0, 45, 0, 45);
-	Image.Image = "rbxassetid://139347223478721";
+	Image.Image = "rbxassetid://85044853000647";
 	Title.Parent = Frame;
 	Title.BackgroundColor3 = _G.Primary;
 	Title.BackgroundTransparency = 1;
@@ -591,7 +591,7 @@ function Update:Window(Config)
 		Button.Text = title or "Button";
 		Button.AnchorPoint = Vector2.new(0.5, 0);
 		Button.Position = UDim2.new(0.5, 0, 0, 0);
-		Button.TextColor3 = Color3.fromRGB(255, 255, 255);
+		Button.TextColor3 = Color3.fromRGB(0, 0, 0);
 		Button.TextSize = 15;
 		Button.AutoButtonColor = false;
 		Button.MouseButton1Click:Connect(function()
@@ -1472,7 +1472,7 @@ function Update:Window(Config)
 			TextboxLabel.Size = UDim2.new(1, 0, 0, 35);
 			TextboxLabel.Font = Enum.Font.Nunito;
 			TextboxLabel.AnchorPoint = Vector2.new(0, 0.5);
-			TextboxLabel.TextColor3 = Color3.fromRGB(0, 0, 0);
+			TextboxLabel.TextColor3 = Color3.fromRGB(255, 255, 255);
 			TextboxLabel.TextSize = 15;
 			TextboxLabel.TextTransparency = 0;
 			TextboxLabel.TextXAlignment = Enum.TextXAlignment.Left;
