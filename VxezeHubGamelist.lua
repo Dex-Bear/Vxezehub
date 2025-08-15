@@ -19,7 +19,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/ref
 elseif placeId == 286090429 then
 --Arsenal
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/refs/heads/main/VxezeHubArsenal.lua"))()
-elseif placeId == 16506890806 or placeId == 79546208627805 then
+elseif placeId == 79546208627805 or placeId == 126509999114328 then
 --99DaysInTheForest
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/refs/heads/main/VxezeHub99daysintheforest.lua"))()
 elseif placeId == 100053088753336 then
