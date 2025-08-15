@@ -22,4 +22,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/ref
 elseif placeId == 16506890806 or placeId == 79546208627805 then
 --99DaysInTheForest
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/refs/heads/main/VxezeHub99daysintheforest.lua"))()
+elseif placeId == 100053088753336 then
+--StealaBranrot
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/refs/heads/main/VxezeHubStealaBranrot.lua"))()
 end
