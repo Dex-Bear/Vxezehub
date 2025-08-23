@@ -27,5 +27,5 @@ elseif placeId == 96342491571673 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/refs/heads/main/VxezeHubStealaBranrot.lua"))()
 elseif placeId == 103754275310547 or placeId == 86076978383613 then
 --HuntyZombie
-loadstring(game:HttpGet("https://pandadevelopment.net/virtual/file/608300aa2bb6701d"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/refs/heads/main/VxezeHubHuntyZombie.lua"))()
 end
