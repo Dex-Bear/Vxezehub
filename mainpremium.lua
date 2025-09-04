@@ -70,7 +70,7 @@ ImageButton.BackgroundColor3 = _G.Dark;
 ImageButton.ImageColor3 = Color3.fromRGB(250, 250, 250);
 ImageButton.ImageTransparency = 0;
 ImageButton.BackgroundTransparency = 0;
-ImageButton.Image = "rbxassetid://91347148253026";
+ImageButton.Image = "rbxassetid://121343009459144";
 ImageButton.AutoButtonColor = false;
 MakeDraggable(ImageButton, OutlineButton);
 CreateRounded(ImageButton, 10);
@@ -127,7 +127,7 @@ function Update:Notify(desc)
 	Image.BackgroundTransparency = 1;
 	Image.Position = UDim2.new(0, 8, 0, 8);
 	Image.Size = UDim2.new(0, 45, 0, 45);
-	Image.Image = "rbxassetid://91347148253026";
+	Image.Image = "rbxassetid://85044853000647";
 	Title.Parent = Frame;
 	Title.BackgroundColor3 = _G.Primary;
 	Title.BackgroundTransparency = 1;
@@ -591,7 +591,7 @@ function Update:Window(Config)
 		Button.Text = title or "Button";
 		Button.AnchorPoint = Vector2.new(0.5, 0);
 		Button.Position = UDim2.new(0.5, 0, 0, 0);
-		Button.TextColor3 = Color3.fromRGB(255, 255, 255);
+		Button.TextColor3 = Color3.fromRGB(0, 0, 0);
 		Button.TextSize = 15;
 		Button.AutoButtonColor = false;
 		Button.MouseButton1Click:Connect(function()
