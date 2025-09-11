@@ -260,16 +260,16 @@ local SettingsLib = {
 };
 (getgenv()).LoadConfig = function()
 	if readfile and writefile and isfile and isfolder then
-		if not isfolder("Vxeze Hub") then
-			makefolder("Vxeze Hub");
+		if not isfolder("Vxeze Hub Free") then
+			makefolder("Vxeze Hub Free");
 		end;
-		if not isfolder("Vxeze Hub/Library/") then
-			makefolder("Vxeze Hub/Library/");
+		if not isfolder("Vxeze Hub Free/Library/") then
+			makefolder("Vxeze Hub Free/Library/");
 		end;
-		if not isfile(("Vxeze Hub/Library/" .. game.Players.LocalPlayer.Name .. ".json")) then
-			writefile("Vxeze Hub/Library/" .. game.Players.LocalPlayer.Name .. ".json", (game:GetService("HttpService")):JSONEncode(SettingsLib));
+		if not isfile(("Vxeze Hub Free/Library/" .. game.Players.LocalPlayer.Name .. ".json")) then
+			writefile("Vxeze Hub Free/Library/" .. game.Players.LocalPlayer.Name .. ".json", (game:GetService("HttpService")):JSONEncode(SettingsLib));
 		else
-			local Decode = (game:GetService("HttpService")):JSONDecode(readfile("Vxeze Hub/Library/" .. game.Players.LocalPlayer.Name .. ".json"));
+			local Decode = (game:GetService("HttpService")):JSONDecode(readfile("Vxeze Hub Free/Library/" .. game.Players.LocalPlayer.Name .. ".json"));
 			for i, v in pairs(Decode) do
 				SettingsLib[i] = v;
 			end;
@@ -281,15 +281,15 @@ local SettingsLib = {
 end;
 (getgenv()).SaveConfig = function()
 	if readfile and writefile and isfile and isfolder then
-		if not isfile(("Vxeze Hub/Library/" .. game.Players.LocalPlayer.Name .. ".json")) then
+		if not isfile(("Vxeze Hub Free/Library/" .. game.Players.LocalPlayer.Name .. ".json")) then
 			(getgenv()).Load();
 		else
-			local Decode = (game:GetService("HttpService")):JSONDecode(readfile("Vxeze Hub/Library/" .. game.Players.LocalPlayer.Name .. ".json"));
+			local Decode = (game:GetService("HttpService")):JSONDecode(readfile("Vxeze Hub Free/Library/" .. game.Players.LocalPlayer.Name .. ".json"));
 			local Array = {};
 			for i, v in pairs(SettingsLib) do
 				Array[i] = v;
 			end;
-			writefile("Vxeze Hub/Library/" .. game.Players.LocalPlayer.Name .. ".json", (game:GetService("HttpService")):JSONEncode(Array));
+			writefile("Vxeze Hub Free/Library/" .. game.Players.LocalPlayer.Name .. ".json", (game:GetService("HttpService")):JSONEncode(Array));
 		end;
 	else
 		return warn("Status : Undetected Executor");
