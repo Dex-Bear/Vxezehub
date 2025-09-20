@@ -28,4 +28,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/ref
 elseif placeId == 103754275310547 or placeId == 86076978383613 then
 --HuntyZombie
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/refs/heads/main/VxezeHubHuntyZombie.lua"))()
+elseif placeId == 121864768012064 then
+--FishIt!
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/refs/heads/main/VxezeHubFishIt!.lua"))()
 end
