@@ -31,4 +31,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/ref
 elseif placeId == 121864768012064 then
 --FishIt!
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/refs/heads/main/VxezeHubFishIt!.lua"))()
+elseif placeId == 127742093697776 then
+--PlantVsBrainrot
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/refs/heads/main/VxezeHubPlantVsBrainrot.lua"))()
 end
