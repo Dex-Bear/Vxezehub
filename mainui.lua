@@ -4638,63 +4638,66 @@ function Library:Window(p)
 		end)
 
 		do
-    local CloseUI = p.CloseUIButton
-    if CloseUI and CloseUI.Enabled then
-        local CloseUIShadow = Instance.new("ImageLabel")
-        local BackgroundCloseUI_1 = Instance.new("Frame")
-        local UICornerCloseUI_1 = Instance.new("UICorner")
-        local Icon_1 = Instance.new("ImageLabel")
+	local CloseUI = p.CloseUIButton
+	local CloseUIShadow = Instance.new("ImageLabel")
+	local UIPaddingCloseUI_1 = Instance.new("UIPadding")
+	local BackgroundCloseUI_1 = Instance.new("Frame")
+	local UICornerCloseUI_1 = Instance.new("UICorner")
+	local FrameCloseUI_1 = Instance.new("Frame")
+	local Icon_1 = Instance.new("ImageLabel")
 
-        CloseUIShadow.Name = "CloseUIShadow"
-        CloseUIShadow.Parent = ScreenGui
-        CloseUIShadow.BackgroundTransparency = 1
-        CloseUIShadow.Position = UDim2.new(0, 20, 0.2, 0)
-        CloseUIShadow.Size = UDim2.new(0, 45, 0, 45)
-        CloseUIShadow.Image = "rbxassetid://1316045217"
-        CloseUIShadow.ImageColor3 = Color3.fromRGB(24,24,31)
-        CloseUIShadow.ImageTransparency = 0.5
-        CloseUIShadow.ScaleType = Enum.ScaleType.Slice
-        CloseUIShadow.SliceCenter = Rect.new(10, 10, 118, 118)
-        CloseUIShadow.Visible = true
+	CloseUIShadow.Name = "CloseUIShadow"
+	CloseUIShadow.Parent = ScreenGui
+	CloseUIShadow.BackgroundColor3 = Color3.fromRGB(163,162,165)
+	CloseUIShadow.BackgroundTransparency = 1
+	CloseUIShadow.Position = UDim2.new(0, 0, 0.2, 0)
+	CloseUIShadow.Size = UDim2.new(0, 70, 0, 40)
+	CloseUIShadow.Image = "rbxassetid://1316045217"
+	CloseUIShadow.ImageColor3 = Color3.fromRGB(24,24,31)
+	CloseUIShadow.ImageTransparency = 0.5
+	CloseUIShadow.ScaleType = Enum.ScaleType.Slice
+	CloseUIShadow.SliceCenter = Rect.new(10, 10, 118, 118)
+	CloseUIShadow.Visible = CloseUI.Enabled
 
-        addToTheme('Shadow', CloseUIShadow)
+	addToTheme('Shadow', CloseUIShadow)
 
-        BackgroundCloseUI_1.Parent = CloseUIShadow
-        BackgroundCloseUI_1.AnchorPoint = Vector2.new(0.5, 0.5)
-        BackgroundCloseUI_1.Position = UDim2.new(0.5, 0, 0.5, 0)
-        BackgroundCloseUI_1.BackgroundColor3 = Color3.fromRGB(29,28,38)
-        BackgroundCloseUI_1.Size = UDim2.new(1, -8, 1, -8)
-        addToTheme('Background', BackgroundCloseUI_1)
+	UIPaddingCloseUI_1.Parent = CloseUIShadow
+	UIPaddingCloseUI_1.PaddingBottom = UDim.new(0,5)
+	UIPaddingCloseUI_1.PaddingLeft = UDim.new(0,5)
+	UIPaddingCloseUI_1.PaddingRight = UDim.new(0,5)
+	UIPaddingCloseUI_1.PaddingTop = UDim.new(0,5)
 
-        UICornerCloseUI_1.Parent = BackgroundCloseUI_1
-        UICornerCloseUI_1.CornerRadius = UDim.new(0, 6)
+	BackgroundCloseUI_1.Parent = CloseUIShadow
+	BackgroundCloseUI_1.AnchorPoint = Vector2.new(0.5, 0.5)
+	BackgroundCloseUI_1.BackgroundColor3 = Color3.fromRGB(29,28,38)
+	BackgroundCloseUI_1.Size = UDim2.new(1, 0, 1, 0)
+	addToTheme('Background', BackgroundCloseUI_1)
 
-        Icon_1.Name = "CloseIcon"
-        Icon_1.Parent = BackgroundCloseUI_1
-        Icon_1.AnchorPoint = Vector2.new(0.5, 0.5)
-        Icon_1.Position = UDim2.new(0.5, 0, 0.5, 0)
-        Icon_1.BackgroundTransparency = 1
-        Icon_1.Size = UDim2.new(0, 28, 0, 28)
-        Icon_1.Image = CloseUI.Image or "rbxassetid://91742863926517"
-        Icon_1.ImageColor3 = Color3.fromRGB(255,255,255)
-        Icon_1.ImageTransparency = 0.05
-        addToTheme('Text & Icon', Icon_1)
+	UICornerCloseUI_1.Parent = BackgroundCloseUI_1
+	UICornerCloseUI_1.CornerRadius = UDim.new(0,6)
 
-        Icon_1.MouseEnter:Connect(function()
-            tw({v = Icon_1, t = 0.2, s = Enum.EasingStyle.Linear, d = "Out", g = {ImageTransparency = 0}}):Play()
-        end)
-        Icon_1.MouseLeave:Connect(function()
-            tw({v = Icon_1, t = 0.2, s = Enum.EasingStyle.Linear, d = "Out", g = {ImageTransparency = 0.05}}):Play()
-        end)
+	Icon_1.Parent = BackgroundCloseUI_1
+	Icon_1.AnchorPoint = Vector2.new(0.5, 0.5)
+	Icon_1.Position = UDim2.new(0.5, 0, 0.5, 0)
+	Icon_1.BackgroundTransparency = 1
+	Icon_1.Size = UDim2.new(0, 26, 0, 26)
+	Icon_1.Image = CloseUI.Image or "rbxassetid://91742863926517"
+	Icon_1.ImageColor3 = Color3.fromRGB(255,255,255)
+	Icon_1.ImageTransparency = 0.05
 
-        local Click = click(CloseUIShadow)
-        Click.MouseButton1Click:Connect(function()
-            tw({v = Icon_1, t = 0.12, s = Enum.EasingStyle.Back, d = "Out", g = {Size = UDim2.new(0, 22, 0, 22)}}):Play()
-            task.wait(0.08)
-            tw({v = Icon_1, t = 0.15, s = Enum.EasingStyle.Back, d = "Out", g = {Size = UDim2.new(0, 28, 0, 28)}}):Play()
-            pcall(closeui)
-        end)
-    end
+	addToTheme('Text & Icon', Icon_1)
+
+	CloseUIShadow.Size = UDim2.new(0, 50, 0, 50)
+
+	local Click = click(CloseUIShadow)
+	lak(Click, CloseUIShadow)
+	Click.MouseButton1Click:Connect(function()
+		tw({v = Icon_1, t = 0.15, s = Enum.EasingStyle.Back, d = "Out", g = {Size = UDim2.new(0, 22, 0, 22)}}):Play()
+		delay(.06, function()
+			tw({v = Icon_1, t = 0.15, s = Enum.EasingStyle.Back, d = "Out", g = {Size = UDim2.new(0, 26, 0, 26)}}):Play()
+		end)
+		pcall(closeui)
+	end)
 endants = true
 
 			addToTheme('Background', BackgroundCloseUI_1)
