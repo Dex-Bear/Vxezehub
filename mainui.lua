@@ -1360,8 +1360,9 @@ function Library:Window(p)
 	local Desc = p.Desc or ''
 	local Icon = p.Icon
 	local Theme = p.Theme or 'Dark'
-	local Keybind = p.Config.Keybind or Enum.KeyCode.LeftControl
-	local Size = p.Config.Size or UDim2.new(0, 530,0, 400)
+	local Keybind = p.Config and p.Config.Keybind or Enum.KeyCode.LeftControl
+	local Size = p.Config and p.Config.Size or UDim2.new(0, 530,0, 400)
+	local CloseUIButton = p.CloseUIButton or {Enabled = false}
 
 	local R, HAA = false, false
 	local HasChangeTheme = p.Theme
@@ -1407,7 +1408,60 @@ function Library:Window(p)
 	Background_1.ClipsDescendants = true
 	Background_1.GroupTransparency = 1
 
-	Shadow_1.Visible = true  
+	Shadow_1.Visible = true
+	-- Topbar (Title/Desc) and CloseUIButton handling
+	local Topbar = Instance.new("Frame")
+	Topbar.Name = "Topbar"
+	Topbar.Parent = Background_1
+	Topbar.Size = UDim2.new(1, 0, 0, 40)
+	Topbar.BackgroundTransparency = 1
+
+	local TitleLabel = Instance.new("TextLabel")
+	TitleLabel.Parent = Topbar
+	TitleLabel.AnchorPoint = Vector2.new(0.5, 0)
+	TitleLabel.Position = UDim2.new(0.5, 0, 0, 5)
+	TitleLabel.Size = UDim2.new(0.9, 0, 0, 18)
+	TitleLabel.Font = Enum.Font.GothamBold
+	TitleLabel.Text = Title
+	TitleLabel.TextColor3 = themes[Theme]["Text & Icon"] or Color3.fromRGB(255,255,255)
+	TitleLabel.TextSize = 14
+	TitleLabel.BackgroundTransparency = 1
+
+	local DescLabel = Instance.new("TextLabel")
+	DescLabel.Parent = Topbar
+	DescLabel.AnchorPoint = Vector2.new(0.5, 0)
+	DescLabel.Position = UDim2.new(0.5, 0, 0, 22)
+	DescLabel.Size = UDim2.new(0.9, 0, 0, 14)
+	DescLabel.Font = Enum.Font.Gotham
+	DescLabel.Text = Desc
+	DescLabel.TextColor3 = themes[Theme]["Text & Icon"] or Color3.fromRGB(255,255,255)
+	DescLabel.TextTransparency = 0.4
+	DescLabel.TextSize = 11
+	DescLabel.BackgroundTransparency = 1
+
+	if CloseUIButton and CloseUIButton.Enabled then
+		local CloseButton = Instance.new("ImageButton")
+		CloseButton.Parent = Topbar
+		CloseButton.Size = UDim2.new(0, 20, 0, 20)
+		CloseButton.Position = UDim2.new(1, -30, 0, 10)
+		CloseButton.Image = CloseUIButton.Icon or "rbxassetid://91742863926517"
+		CloseButton.ImageTransparency = 0.5
+		CloseButton.BackgroundTransparency = 1
+
+		CloseButton.MouseEnter:Connect(function()
+			CloseButton.ImageTransparency = 0.2
+		end)
+		CloseButton.MouseLeave:Connect(function()
+			CloseButton.ImageTransparency = 0.5
+		end)
+		CloseButton.MouseButton1Click:Connect(function()
+			Tw = game:GetService("TweenService")
+			Tw:Create(Shadow_1, TweenInfo.new(0.25), {ImageTransparency = 1}):Play()
+			task.wait(0.25)
+			ScreenGui:Destroy()
+		end)
+	end
+  
 	local org = Background_1.Size
 	Background_1.Size = org - UDim2.fromOffset(5, 5)
 	tw({
@@ -4829,7 +4883,60 @@ end
 				close.Completed:Wait()
 				Shadow_1.Visible = false
 			else
-				Shadow_1.Visible = true  
+				Shadow_1.Visible = true
+	-- Topbar (Title/Desc) and CloseUIButton handling
+	local Topbar = Instance.new("Frame")
+	Topbar.Name = "Topbar"
+	Topbar.Parent = Background_1
+	Topbar.Size = UDim2.new(1, 0, 0, 40)
+	Topbar.BackgroundTransparency = 1
+
+	local TitleLabel = Instance.new("TextLabel")
+	TitleLabel.Parent = Topbar
+	TitleLabel.AnchorPoint = Vector2.new(0.5, 0)
+	TitleLabel.Position = UDim2.new(0.5, 0, 0, 5)
+	TitleLabel.Size = UDim2.new(0.9, 0, 0, 18)
+	TitleLabel.Font = Enum.Font.GothamBold
+	TitleLabel.Text = Title
+	TitleLabel.TextColor3 = themes[Theme]["Text & Icon"] or Color3.fromRGB(255,255,255)
+	TitleLabel.TextSize = 14
+	TitleLabel.BackgroundTransparency = 1
+
+	local DescLabel = Instance.new("TextLabel")
+	DescLabel.Parent = Topbar
+	DescLabel.AnchorPoint = Vector2.new(0.5, 0)
+	DescLabel.Position = UDim2.new(0.5, 0, 0, 22)
+	DescLabel.Size = UDim2.new(0.9, 0, 0, 14)
+	DescLabel.Font = Enum.Font.Gotham
+	DescLabel.Text = Desc
+	DescLabel.TextColor3 = themes[Theme]["Text & Icon"] or Color3.fromRGB(255,255,255)
+	DescLabel.TextTransparency = 0.4
+	DescLabel.TextSize = 11
+	DescLabel.BackgroundTransparency = 1
+
+	if CloseUIButton and CloseUIButton.Enabled then
+		local CloseButton = Instance.new("ImageButton")
+		CloseButton.Parent = Topbar
+		CloseButton.Size = UDim2.new(0, 20, 0, 20)
+		CloseButton.Position = UDim2.new(1, -30, 0, 10)
+		CloseButton.Image = CloseUIButton.Icon or "rbxassetid://91742863926517"
+		CloseButton.ImageTransparency = 0.5
+		CloseButton.BackgroundTransparency = 1
+
+		CloseButton.MouseEnter:Connect(function()
+			CloseButton.ImageTransparency = 0.2
+		end)
+		CloseButton.MouseLeave:Connect(function()
+			CloseButton.ImageTransparency = 0.5
+		end)
+		CloseButton.MouseButton1Click:Connect(function()
+			Tw = game:GetService("TweenService")
+			Tw:Create(Shadow_1, TweenInfo.new(0.25), {ImageTransparency = 1}):Play()
+			task.wait(0.25)
+			ScreenGui:Destroy()
+		end)
+	end
+  
 				local open = tw({
 					v = Background_1,
 					t = 0.15,
