@@ -1210,13 +1210,6 @@ function Library:Window(p)
 	Close_1.Size = UDim2.new(0, 16,0, 16)
 	Close_1.Image = "rbxassetid://15082305656"
 
-        -- Added: Support custom icon from CloseUIButton
-        if p.CloseUIButton and p.CloseUIButton.Icon then
-            Close_1.Image = gl(p.CloseUIButton.Icon).Image
-            Close_1.ImageRectSize = gl(p.CloseUIButton.Icon).ImageRectSize
-            Close_1.ImageRectOffset = gl(p.CloseUIButton.Icon).ImageRectPosition
-        end
-
 	ChSize_1.Name = "Size"
 	ChSize_1.Parent = Ct_1
 	ChSize_1.Active = true
