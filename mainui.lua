@@ -2,7 +2,7 @@ Library = {}
 SaveTheme = {}
 
 local themes = {
-	index = {'Dark', 'Amethyst', 'Emerald', 'Crimson', 'Sapphire', 'Amber', 'Onyx'},
+	index = {'Dark', 'Amethyst'},
 	Amethyst = {
 		['Shadow'] = Color3.fromRGB(24, 24, 31),
 		['Background'] = Color3.fromRGB(29, 28, 38),
@@ -155,466 +155,6 @@ local themes = {
 			}
 		}
 	},
-	Emerald = {
-		['Shadow'] = Color3.fromRGB(20, 25, 25),
-		['Background'] = Color3.fromRGB(25, 35, 35),
-		['Page'] = Color3.fromRGB(20, 25, 25),
-		['Main'] = Color3.fromRGB(50, 168, 128),
-		['Text & Icon'] = Color3.fromRGB(230, 255, 240),
-		['Function'] = {
-			['Toggle'] = {
-				['Background'] = Color3.fromRGB(25, 35, 35),
-				['True'] = {
-					['Toggle Background'] = Color3.fromRGB(35, 60, 50),
-					['Toggle Value'] = Color3.fromRGB(50, 168, 128),
-				},
-				['False'] = {
-					['Toggle Background'] = Color3.fromRGB(30, 40, 40),
-					['Toggle Value'] = Color3.fromRGB(40, 50, 50),
-				}
-			},
-			['Label'] = {
-				['Background'] = Color3.fromRGB(25, 35, 35),
-			},
-			['Dropdown'] = {
-				['Background'] = Color3.fromRGB(25, 35, 35),
-				['Value Background'] = Color3.fromRGB(20, 25, 25),
-				['Value Stroke'] = Color3.fromRGB(230, 255, 240),
-				['Dropdown Select'] = {
-					['Background'] = Color3.fromRGB(20, 25, 25),
-					['Search'] = Color3.fromRGB(30, 40, 40),
-					['Item Background'] = Color3.fromRGB(35, 45, 45),
-				}
-			},
-			['Slider'] = {
-				['Background'] = Color3.fromRGB(25, 35, 35),
-				['Value Background'] = Color3.fromRGB(20, 25, 25),
-				['Value Stroke'] = Color3.fromRGB(230, 255, 240),
-				['Slider Bar'] = Color3.fromRGB(35, 60, 50),
-				['Slider Bar Value'] = Color3.fromRGB(50, 168, 128),
-				['Circle Value'] = Color3.fromRGB(230, 255, 240),
-			},
-			['Code'] = {
-				['Background'] = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(25, 35, 35)), ColorSequenceKeypoint.new(1, Color3.fromRGB(25, 35, 35))},
-				['Background Code'] = Color3.fromRGB(40, 60, 60),
-				['Background Code Value'] = Color3.fromRGB(30, 45, 45),
-				['ScrollingFrame Code'] = Color3.fromRGB(120, 200, 160),
-			},
-			['Button'] = {
-				['Background'] = Color3.fromRGB(25, 35, 35),
-				['Click'] = Color3.fromRGB(230, 255, 240),
-			},
-			['Textbox'] = {
-				['Background'] = Color3.fromRGB(25, 35, 35),
-				['Value Background'] = Color3.fromRGB(20, 25, 25),
-				['Value Stroke'] = Color3.fromRGB(230, 255, 240),
-			},
-			['Keybind'] = {
-				['Background'] = Color3.fromRGB(25, 35, 35),
-				['Value Background'] = Color3.fromRGB(20, 25, 25),
-				['Value Stroke'] = Color3.fromRGB(230, 255, 240),
-				['True'] = {
-					['Toggle Background'] = Color3.fromRGB(35, 60, 50),
-					['Toggle Value'] = Color3.fromRGB(50, 168, 128),
-				},
-				['False'] = {
-					['Toggle Background'] = Color3.fromRGB(30, 40, 40),
-					['Toggle Value'] = Color3.fromRGB(40, 50, 50),
-				}
-			},
-			['Color Picker'] = {
-				['Background'] = Color3.fromRGB(25, 35, 35),
-				['Color Select'] = {
-					['Background'] = Color3.fromRGB(20, 25, 25),
-					['UIStroke'] = Color3.fromRGB(230, 255, 240),
-				}
-			}
-		}
-	},
-	Crimson = {
-		['Shadow'] = Color3.fromRGB(25, 20, 20),
-		['Background'] = Color3.fromRGB(35, 25, 25),
-		['Page'] = Color3.fromRGB(25, 20, 20),
-		['Main'] = Color3.fromRGB(180, 50, 60),
-		['Text & Icon'] = Color3.fromRGB(255, 230, 230),
-		['Function'] = {
-			['Toggle'] = {
-				['Background'] = Color3.fromRGB(35, 25, 25),
-				['True'] = {
-					['Toggle Background'] = Color3.fromRGB(60, 35, 40),
-					['Toggle Value'] = Color3.fromRGB(180, 50, 60),
-				},
-				['False'] = {
-					['Toggle Background'] = Color3.fromRGB(40, 30, 30),
-					['Toggle Value'] = Color3.fromRGB(50, 40, 40),
-				}
-			},
-			['Label'] = {
-				['Background'] = Color3.fromRGB(35, 25, 25),
-			},
-			['Dropdown'] = {
-				['Background'] = Color3.fromRGB(35, 25, 25),
-				['Value Background'] = Color3.fromRGB(25, 20, 20),
-				['Value Stroke'] = Color3.fromRGB(255, 230, 230),
-				['Dropdown Select'] = {
-					['Background'] = Color3.fromRGB(25, 20, 20),
-					['Search'] = Color3.fromRGB(40, 30, 30),
-					['Item Background'] = Color3.fromRGB(45, 35, 35),
-				}
-			},
-			['Slider'] = {
-				['Background'] = Color3.fromRGB(35, 25, 25),
-				['Value Background'] = Color3.fromRGB(25, 20, 20),
-				['Value Stroke'] = Color3.fromRGB(255, 230, 230),
-				['Slider Bar'] = Color3.fromRGB(60, 35, 40),
-				['Slider Bar Value'] = Color3.fromRGB(180, 50, 60),
-				['Circle Value'] = Color3.fromRGB(255, 230, 230),
-			},
-			['Code'] = {
-				['Background'] = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(35, 25, 25)), ColorSequenceKeypoint.new(1, Color3.fromRGB(35, 25, 25))},
-				['Background Code'] = Color3.fromRGB(60, 40, 40),
-				['Background Code Value'] = Color3.fromRGB(45, 30, 30),
-				['ScrollingFrame Code'] = Color3.fromRGB(200, 120, 130),
-			},
-			['Button'] = {
-				['Background'] = Color3.fromRGB(35, 25, 25),
-				['Click'] = Color3.fromRGB(255, 230, 230),
-			},
-			['Textbox'] = {
-				['Background'] = Color3.fromRGB(35, 25, 25),
-				['Value Background'] = Color3.fromRGB(25, 20, 20),
-				['Value Stroke'] = Color3.fromRGB(255, 230, 230),
-			},
-			['Keybind'] = {
-				['Background'] = Color3.fromRGB(35, 25, 25),
-				['Value Background'] = Color3.fromRGB(25, 20, 20),
-				['Value Stroke'] = Color3.fromRGB(255, 230, 230),
-				['True'] = {
-					['Toggle Background'] = Color3.fromRGB(60, 35, 40),
-					['Toggle Value'] = Color3.fromRGB(180, 50, 60),
-				},
-				['False'] = {
-					['Toggle Background'] = Color3.fromRGB(40, 30, 30),
-					['Toggle Value'] = Color3.fromRGB(50, 40, 40),
-				}
-			},
-			['Color Picker'] = {
-				['Background'] = Color3.fromRGB(35, 25, 25),
-				['Color Select'] = {
-					['Background'] = Color3.fromRGB(25, 20, 20),
-					['UIStroke'] = Color3.fromRGB(255, 230, 230),
-				}
-			}
-		}
-	},
-	Sapphire = {
-		['Shadow'] = Color3.fromRGB(20, 20, 30),
-		['Background'] = Color3.fromRGB(25, 25, 40),
-		['Page'] = Color3.fromRGB(20, 20, 30),
-		['Main'] = Color3.fromRGB(60, 80, 180),
-		['Text & Icon'] = Color3.fromRGB(230, 240, 255),
-		['Function'] = {
-			['Toggle'] = {
-				['Background'] = Color3.fromRGB(25, 25, 40),
-				['True'] = {
-					['Toggle Background'] = Color3.fromRGB(40, 40, 70),
-					['Toggle Value'] = Color3.fromRGB(60, 80, 180),
-				},
-				['False'] = {
-					['Toggle Background'] = Color3.fromRGB(30, 30, 50),
-					['Toggle Value'] = Color3.fromRGB(40, 40, 60),
-				}
-			},
-			['Label'] = {
-				['Background'] = Color3.fromRGB(25, 25, 40),
-			},
-			['Dropdown'] = {
-				['Background'] = Color3.fromRGB(25, 25, 40),
-				['Value Background'] = Color3.fromRGB(20, 20, 30),
-				['Value Stroke'] = Color3.fromRGB(230, 240, 255),
-				['Dropdown Select'] = {
-					['Background'] = Color3.fromRGB(20, 20, 30),
-					['Search'] = Color3.fromRGB(30, 30, 50),
-					['Item Background'] = Color3.fromRGB(35, 35, 60),
-				}
-			},
-			['Slider'] = {
-				['Background'] = Color3.fromRGB(25, 25, 40),
-				['Value Background'] = Color3.fromRGB(20, 20, 30),
-				['Value Stroke'] = Color3.fromRGB(230, 240, 255),
-				['Slider Bar'] = Color3.fromRGB(40, 40, 70),
-				['Slider Bar Value'] = Color3.fromRGB(60, 80, 180),
-				['Circle Value'] = Color3.fromRGB(230, 240, 255),
-			},
-			['Code'] = {
-				['Background'] = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(25, 25, 40)), ColorSequenceKeypoint.new(1, Color3.fromRGB(25, 25, 40))},
-				['Background Code'] = Color3.fromRGB(40, 40, 60),
-				['Background Code Value'] = Color3.fromRGB(30, 30, 50),
-				['ScrollingFrame Code'] = Color3.fromRGB(130, 150, 200),
-			},
-			['Button'] = {
-				['Background'] = Color3.fromRGB(25, 25, 40),
-				['Click'] = Color3.fromRGB(230, 240, 255),
-			},
-			['Textbox'] = {
-				['Background'] = Color3.fromRGB(25, 25, 40),
-				['Value Background'] = Color3.fromRGB(20, 20, 30),
-				['Value Stroke'] = Color3.fromRGB(230, 240, 255),
-			},
-			['Keybind'] = {
-				['Background'] = Color3.fromRGB(25, 25, 40),
-				['Value Background'] = Color3.fromRGB(20, 20, 30),
-				['Value Stroke'] = Color3.fromRGB(230, 240, 255),
-				['True'] = {
-					['Toggle Background'] = Color3.fromRGB(40, 40, 70),
-					['Toggle Value'] = Color3.fromRGB(60, 80, 180),
-				},
-				['False'] = {
-					['Toggle Background'] = Color3.fromRGB(30, 30, 50),
-					['Toggle Value'] = Color3.fromRGB(40, 40, 60),
-				}
-			},
-			['Color Picker'] = {
-				['Background'] = Color3.fromRGB(25, 25, 40),
-				['Color Select'] = {
-					['Background'] = Color3.fromRGB(20, 20, 30),
-					['UIStroke'] = Color3.fromRGB(230, 240, 255),
-				}
-			}
-		}
-	},
-	Amber = {
-		['Shadow'] = Color3.fromRGB(30, 25, 20),
-		['Background'] = Color3.fromRGB(40, 35, 25),
-		['Page'] = Color3.fromRGB(30, 25, 20),
-		['Main'] = Color3.fromRGB(200, 120, 50),
-		['Text & Icon'] = Color3.fromRGB(255, 245, 230),
-		['Function'] = {
-			['Toggle'] = {
-				['Background'] = Color3.fromRGB(40, 35, 25),
-				['True'] = {
-					['Toggle Background'] = Color3.fromRGB(60, 50, 35),
-					['Toggle Value'] = Color3.fromRGB(200, 120, 50),
-				},
-				['False'] = {
-					['Toggle Background'] = Color3.fromRGB(50, 40, 30),
-					['Toggle Value'] = Color3.fromRGB(60, 50, 40),
-				}
-			},
-			['Label'] = {
-				['Background'] = Color3.fromRGB(40, 35, 25),
-			},
-			['Dropdown'] = {
-				['Background'] = Color3.fromRGB(40, 35, 25),
-				['Value Background'] = Color3.fromRGB(30, 25, 20),
-				['Value Stroke'] = Color3.fromRGB(255, 245, 230),
-				['Dropdown Select'] = {
-					['Background'] = Color3.fromRGB(30, 25, 20),
-					['Search'] = Color3.fromRGB(50, 40, 30),
-					['Item Background'] = Color3.fromRGB(60, 50, 35),
-				}
-			},
-			['Slider'] = {
-				['Background'] = Color3.fromRGB(40, 35, 25),
-				['Value Background'] = Color3.fromRGB(30, 25, 20),
-				['Value Stroke'] = Color3.fromRGB(255, 245, 230),
-				['Slider Bar'] = Color3.fromRGB(60, 50, 35),
-				['Slider Bar Value'] = Color3.fromRGB(200, 120, 50),
-				['Circle Value'] = Color3.fromRGB(255, 245, 230),
-			},
-			['Code'] = {
-				['Background'] = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(40, 35, 25)), ColorSequenceKeypoint.new(1, Color3.fromRGB(40, 35, 25))},
-				['Background Code'] = Color3.fromRGB(70, 60, 40),
-				['Background Code Value'] = Color3.fromRGB(50, 45, 30),
-				['ScrollingFrame Code'] = Color3.fromRGB(220, 150, 100),
-			},
-			['Button'] = {
-				['Background'] = Color3.fromRGB(40, 35, 25),
-				['Click'] = Color3.fromRGB(255, 245, 230),
-			},
-			['Textbox'] = {
-				['Background'] = Color3.fromRGB(40, 35, 25),
-				['Value Background'] = Color3.fromRGB(30, 25, 20),
-				['Value Stroke'] = Color3.fromRGB(255, 245, 230),
-			},
-			['Keybind'] = {
-				['Background'] = Color3.fromRGB(40, 35, 25),
-				['Value Background'] = Color3.fromRGB(30, 25, 20),
-				['Value Stroke'] = Color3.fromRGB(255, 245, 230),
-				['True'] = {
-					['Toggle Background'] = Color3.fromRGB(60, 50, 35),
-					['Toggle Value'] = Color3.fromRGB(200, 120, 50),
-				},
-				['False'] = {
-					['Toggle Background'] = Color3.fromRGB(50, 40, 30),
-					['Toggle Value'] = Color3.fromRGB(60, 50, 40),
-				}
-			},
-			['Color Picker'] = {
-				['Background'] = Color3.fromRGB(40, 35, 25),
-				['Color Select'] = {
-					['Background'] = Color3.fromRGB(30, 25, 20),
-					['UIStroke'] = Color3.fromRGB(255, 245, 230),
-				}
-			}
-		}
-	},
-	Onyx = {
-		['Shadow'] = Color3.fromRGB(10, 10, 10),
-		['Background'] = Color3.fromRGB(15, 15, 15),
-		['Page'] = Color3.fromRGB(10, 10, 10),
-		['Main'] = Color3.fromRGB(40, 40, 40),
-		['Text & Icon'] = Color3.fromRGB(220, 220, 220),
-		['Function'] = {
-			['Toggle'] = {
-				['Background'] = Color3.fromRGB(15, 15, 15),
-				['True'] = {
-					['Toggle Background'] = Color3.fromRGB(25, 25, 25),
-					['Toggle Value'] = Color3.fromRGB(40, 40, 40),
-				},
-				['False'] = {
-					['Toggle Background'] = Color3.fromRGB(20, 20, 20),
-					['Toggle Value'] = Color3.fromRGB(30, 30, 30),
-				}
-			},
-			['Label'] = {
-				['Background'] = Color3.fromRGB(15, 15, 15),
-			},
-			['Dropdown'] = {
-				['Background'] = Color3.fromRGB(15, 15, 15),
-				['Value Background'] = Color3.fromRGB(10, 10, 10),
-				['Value Stroke'] = Color3.fromRGB(220, 220, 220),
-				['Dropdown Select'] = {
-					['Background'] = Color3.fromRGB(10, 10, 10),
-					['Search'] = Color3.fromRGB(20, 20, 20),
-					['Item Background'] = Color3.fromRGB(25, 25, 25),
-				}
-			},
-			['Slider'] = {
-				['Background'] = Color3.fromRGB(15, 15, 15),
-				['Value Background'] = Color3.fromRGB(10, 10, 10),
-				['Value Stroke'] = Color3.fromRGB(220, 220, 220),
-				['Slider Bar'] = Color3.fromRGB(25, 25, 25),
-				['Slider Bar Value'] = Color3.fromRGB(40, 40, 40),
-				['Circle Value'] = Color3.fromRGB(220, 220, 220),
-			},
-			['Code'] = {
-				['Background'] = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(15, 15, 15)), ColorSequenceKeypoint.new(1, Color3.fromRGB(15, 15, 15))},
-				['Background Code'] = Color3.fromRGB(25, 25, 25),
-				['Background Code Value'] = Color3.fromRGB(20, 20, 20),
-				['ScrollingFrame Code'] = Color3.fromRGB(100, 100, 100),
-			},
-			['Button'] = {
-				['Background'] = Color3.fromRGB(15, 15, 15),
-				['Click'] = Color3.fromRGB(220, 220, 220),
-			},
-			['Textbox'] = {
-				['Background'] = Color3.fromRGB(15, 15, 15),
-				['Value Background'] = Color3.fromRGB(10, 10, 10),
-				['Value Stroke'] = Color3.fromRGB(220, 220, 220),
-			},
-			['Keybind'] = {
-				['Background'] = Color3.fromRGB(15, 15, 15),
-				['Value Background'] = Color3.fromRGB(10, 10, 10),
-				['Value Stroke'] = Color3.fromRGB(220, 220, 220),
-				['True'] = {
-					['Toggle Background'] = Color3.fromRGB(25, 25, 25),
-					['Toggle Value'] = Color3.fromRGB(40, 40, 40),
-				},
-				['False'] = {
-					['Toggle Background'] = Color3.fromRGB(20, 20, 20),
-					['Toggle Value'] = Color3.fromRGB(30, 30, 30),
-				}
-			},
-			['Color Picker'] = {
-				['Background'] = Color3.fromRGB(15, 15, 15),
-				['Color Select'] = {
-					['Background'] = Color3.fromRGB(10, 10, 10),
-					['UIStroke'] = Color3.fromRGB(220, 220, 220),
-				}
-			}
-		}
-	},
-	-- Add new themes here, following the same structure as the existing ones.
-	-- Example placeholder for a new theme:
-	--[[
-	NewThemeName = {
-		['Shadow'] = Color3.fromRGB(R, G, B),
-		['Background'] = Color3.fromRGB(R, G, B),
-		['Page'] = Color3.fromRGB(R, G, B),
-		['Main'] = Color3.fromRGB(R, G, B),
-		['Text & Icon'] = Color3.fromRGB(R, G, B),
-		['Function'] = {
-			['Toggle'] = {
-				['Background'] = Color3.fromRGB(R, G, B),
-				['True'] = {
-					['Toggle Background'] = Color3.fromRGB(R, G, B),
-					['Toggle Value'] = Color3.fromRGB(R, G, B),
-				},
-				['False'] = {
-					['Toggle Background'] = Color3.fromRGB(R, G, B),
-					['Toggle Value'] = Color3.fromRGB(R, G, B),
-				}
-			},
-			['Label'] = {
-				['Background'] = Color3.fromRGB(R, G, B),
-			},
-			['Dropdown'] = {
-				['Background'] = Color3.fromRGB(R, G, B),
-				['Value Background'] = Color3.fromRGB(R, G, B),
-				['Value Stroke'] = Color3.fromRGB(R, G, B),
-				['Dropdown Select'] = {
-					['Background'] = Color3.fromRGB(R, G, B),
-					['Search'] = Color3.fromRGB(R, G, B),
-					['Item Background'] = Color3.fromRGB(R, G, B),
-				}
-			},
-			['Slider'] = {
-				['Background'] = Color3.fromRGB(R, G, B),
-				['Value Background'] = Color3.fromRGB(R, G, B),
-				['Value Stroke'] = Color3.fromRGB(R, G, B),
-				['Slider Bar'] = Color3.fromRGB(R, G, B),
-				['Slider Bar Value'] = Color3.fromRGB(R, G, B),
-				['Circle Value'] = Color3.fromRGB(R, G, B),
-			},
-			['Code'] = {
-				['Background'] = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(R, G, B)), ColorSequenceKeypoint.new(1, Color3.fromRGB(R, G, B))},
-				['Background Code'] = Color3.fromRGB(R, G, B),
-				['Background Code Value'] = Color3.fromRGB(R, G, B),
-				['ScrollingFrame Code'] = Color3.fromRGB(R, G, B),
-			},
-			['Button'] = {
-				['Background'] = Color3.fromRGB(R, G, B),
-				['Click'] = Color3.fromRGB(R, G, B),
-			},
-			['Textbox'] = {
-				['Background'] = Color3.fromRGB(R, G, B),
-				['Value Background'] = Color3.fromRGB(R, G, B),
-				['Value Stroke'] = Color3.fromRGB(R, G, B),
-			},
-			['Keybind'] = {
-				['Background'] = Color3.fromRGB(R, G, B),
-				['Value Background'] = Color3.fromRGB(R, G, B),
-				['Value Stroke'] = Color3.fromRGB(R, G, B),
-				['True'] = {
-					['Toggle Background'] = Color3.fromRGB(R, G, B),
-					['Toggle Value'] = Color3.fromRGB(R, G, B),
-				},
-				['False'] = {
-					['Toggle Background'] = Color3.fromRGB(R, G, B),
-					['Toggle Value'] = Color3.fromRGB(R, G, B),
-				}
-			},
-			['Color Picker'] = {
-				['Background'] = Color3.fromRGB(R, G, B),
-				['Color Select'] = {
-					['Background'] = Color3.fromRGB(R, G, B),
-					['UIStroke'] = Color3.fromRGB(R, G, B),
-				}
-			}
-		}
-	},
-	--]]
 }
 
 local ScreenGui = Instance.new("ScreenGui")
@@ -5098,45 +4638,64 @@ function Library:Window(p)
 		end)
 
 		do
-			local CloseUI = p.CloseUIButton
-			local CloseUIShadow = Instance.new("ImageLabel")
-			local UIPaddingCloseUI_1 = Instance.new("UIPadding")
-			local BackgroundCloseUI_1 = Instance.new("Frame")
-			local UICornerCloseUI_1 = Instance.new("UICorner")
-			local FrameCloseUI_1 = Instance.new("Frame")
-			local Title_1 = Instance.new("TextLabel")
+    local CloseUI = p.CloseUIButton
+    if CloseUI and CloseUI.Enabled then
+        local CloseUIShadow = Instance.new("ImageLabel")
+        local BackgroundCloseUI_1 = Instance.new("Frame")
+        local UICornerCloseUI_1 = Instance.new("UICorner")
+        local Icon_1 = Instance.new("ImageLabel")
 
-			CloseUIShadow.Name = "CloseUIShadow"
-			CloseUIShadow.Parent = ScreenGui
-			CloseUIShadow.BackgroundColor3 = Color3.fromRGB(163,162,165)
-			CloseUIShadow.BackgroundTransparency = 1
-			CloseUIShadow.Position = UDim2.new(0, 0,0.200000003, 0)
-			CloseUIShadow.Size = UDim2.new(0, 70,0, 40)
-			CloseUIShadow.Image = "rbxassetid://1316045217"
-			CloseUIShadow.ImageColor3 = Color3.fromRGB(24,24,31)
-			CloseUIShadow.ImageTransparency = 0.5
-			CloseUIShadow.ScaleType = Enum.ScaleType.Slice
-			CloseUIShadow.SliceCenter = Rect.new(10, 10, 118, 118)
-			CloseUIShadow.Visible = CloseUI.Enabled
+        CloseUIShadow.Name = "CloseUIShadow"
+        CloseUIShadow.Parent = ScreenGui
+        CloseUIShadow.BackgroundTransparency = 1
+        CloseUIShadow.Position = UDim2.new(0, 20, 0.2, 0)
+        CloseUIShadow.Size = UDim2.new(0, 45, 0, 45)
+        CloseUIShadow.Image = "rbxassetid://1316045217"
+        CloseUIShadow.ImageColor3 = Color3.fromRGB(24,24,31)
+        CloseUIShadow.ImageTransparency = 0.5
+        CloseUIShadow.ScaleType = Enum.ScaleType.Slice
+        CloseUIShadow.SliceCenter = Rect.new(10, 10, 118, 118)
+        CloseUIShadow.Visible = true
 
-			addToTheme('Shadow', CloseUIShadow)
+        addToTheme('Shadow', CloseUIShadow)
 
-			UIPaddingCloseUI_1.Name = "UIPaddingCloseUI"
-			UIPaddingCloseUI_1.Parent = CloseUIShadow
-			UIPaddingCloseUI_1.PaddingBottom = UDim.new(0,5)
-			UIPaddingCloseUI_1.PaddingLeft = UDim.new(0,5)
-			UIPaddingCloseUI_1.PaddingRight = UDim.new(0,5)
-			UIPaddingCloseUI_1.PaddingTop = UDim.new(0,5)
+        BackgroundCloseUI_1.Parent = CloseUIShadow
+        BackgroundCloseUI_1.AnchorPoint = Vector2.new(0.5, 0.5)
+        BackgroundCloseUI_1.Position = UDim2.new(0.5, 0, 0.5, 0)
+        BackgroundCloseUI_1.BackgroundColor3 = Color3.fromRGB(29,28,38)
+        BackgroundCloseUI_1.Size = UDim2.new(1, -8, 1, -8)
+        addToTheme('Background', BackgroundCloseUI_1)
 
-			BackgroundCloseUI_1.Name = "BackgroundCloseUI"
-			BackgroundCloseUI_1.Parent = CloseUIShadow
-			BackgroundCloseUI_1.AnchorPoint = Vector2.new(0.5, 0.5)
-			BackgroundCloseUI_1.BackgroundColor3 = Color3.fromRGB(29,28,38)
-			BackgroundCloseUI_1.BorderColor3 = Color3.fromRGB(0,0,0)
-			BackgroundCloseUI_1.BorderSizePixel = 0
-			BackgroundCloseUI_1.Position = UDim2.new(0.5, 0,0.5, 0)
-			BackgroundCloseUI_1.Size = UDim2.new(1, 0,1, 0)
-			BackgroundCloseUI_1.ClipsDescendants = true
+        UICornerCloseUI_1.Parent = BackgroundCloseUI_1
+        UICornerCloseUI_1.CornerRadius = UDim.new(0, 6)
+
+        Icon_1.Name = "CloseIcon"
+        Icon_1.Parent = BackgroundCloseUI_1
+        Icon_1.AnchorPoint = Vector2.new(0.5, 0.5)
+        Icon_1.Position = UDim2.new(0.5, 0, 0.5, 0)
+        Icon_1.BackgroundTransparency = 1
+        Icon_1.Size = UDim2.new(0, 28, 0, 28)
+        Icon_1.Image = CloseUI.Image or "rbxassetid://91742863926517"
+        Icon_1.ImageColor3 = Color3.fromRGB(255,255,255)
+        Icon_1.ImageTransparency = 0.05
+        addToTheme('Text & Icon', Icon_1)
+
+        Icon_1.MouseEnter:Connect(function()
+            tw({v = Icon_1, t = 0.2, s = Enum.EasingStyle.Linear, d = "Out", g = {ImageTransparency = 0}}):Play()
+        end)
+        Icon_1.MouseLeave:Connect(function()
+            tw({v = Icon_1, t = 0.2, s = Enum.EasingStyle.Linear, d = "Out", g = {ImageTransparency = 0.05}}):Play()
+        end)
+
+        local Click = click(CloseUIShadow)
+        Click.MouseButton1Click:Connect(function()
+            tw({v = Icon_1, t = 0.12, s = Enum.EasingStyle.Back, d = "Out", g = {Size = UDim2.new(0, 22, 0, 22)}}):Play()
+            task.wait(0.08)
+            tw({v = Icon_1, t = 0.15, s = Enum.EasingStyle.Back, d = "Out", g = {Size = UDim2.new(0, 28, 0, 28)}}):Play()
+            pcall(closeui)
+        end)
+    end
+endants = true
 
 			addToTheme('Background', BackgroundCloseUI_1)
 
@@ -5184,49 +4743,6 @@ function Library:Window(p)
 	end
 
 	return Tabs
-
-if p.CloseUIButton and p.CloseUIButton.Enabled then
-    local CloseBtnFrame = Instance.new("Frame")
-    CloseBtnFrame.Name = "CloseUIButton"
-    CloseBtnFrame.Parent = Background_1
-    CloseBtnFrame.AnchorPoint = Vector2.new(0.5, 1)
-    CloseBtnFrame.Position = UDim2.new(0.5, 0, 1, -15)
-    CloseBtnFrame.Size = UDim2.new(0, 35, 0, 35)
-    CloseBtnFrame.BackgroundColor3 = Color3.fromRGB(91, 68, 209)
-    CloseBtnFrame.BorderSizePixel = 0
-
-    local UICorner = Instance.new("UICorner")
-    UICorner.CornerRadius = UDim.new(0, 8)
-    UICorner.Parent = CloseBtnFrame
-
-    if p.CloseUIButton.Image then
-        local CloseImage = Instance.new("ImageLabel")
-        CloseImage.Parent = CloseBtnFrame
-        CloseImage.AnchorPoint = Vector2.new(0.5, 0.5)
-        CloseImage.Position = UDim2.new(0.5, 0, 0.5, 0)
-        CloseImage.Size = UDim2.new(0, 20, 0, 20)
-        CloseImage.BackgroundTransparency = 1
-        CloseImage.Image = tostring(p.CloseUIButton.Image)
-        CloseImage.ImageTransparency = 0.1
-        addToTheme("Text & Icon", CloseImage)
-    end
-
-    addToTheme("Main", CloseBtnFrame)
-
-    local ClickClose = click(CloseBtnFrame)
-    ClickClose.MouseButton1Click:Connect(function()
-        tw({
-            v = Background_1,
-            t = 0.25,
-            s = Enum.EasingStyle.Linear,
-            d = "Out",
-            g = {GroupTransparency = 1}
-        }):Play()
-        task.wait(0.25)
-        ScreenGui:Destroy()
-    end)
-end
-
 end
 
 return Library
