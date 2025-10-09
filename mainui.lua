@@ -2,7 +2,7 @@ Library = {}
 SaveTheme = {}
 
 local themes = {
-	index = {'Dark', 'Amethyst'},
+	index = {'Dark', 'Amethyst', 'Emerald', 'Crimson'},
 	Amethyst = {
 		['Shadow'] = Color3.fromRGB(24, 24, 31),
 		['Background'] = Color3.fromRGB(29, 28, 38),
@@ -155,6 +155,158 @@ local themes = {
 			}
 		}
 	},
+	Emerald = {
+		['Shadow'] = Color3.fromRGB(20, 25, 25),
+		['Background'] = Color3.fromRGB(25, 35, 35),
+		['Page'] = Color3.fromRGB(20, 25, 25),
+		['Main'] = Color3.fromRGB(50, 168, 128),
+		['Text & Icon'] = Color3.fromRGB(230, 255, 240),
+		['Function'] = {
+			['Toggle'] = {
+				['Background'] = Color3.fromRGB(25, 35, 35),
+				['True'] = {
+					['Toggle Background'] = Color3.fromRGB(35, 60, 50),
+					['Toggle Value'] = Color3.fromRGB(50, 168, 128),
+				},
+				['False'] = {
+					['Toggle Background'] = Color3.fromRGB(30, 40, 40),
+					['Toggle Value'] = Color3.fromRGB(40, 50, 50),
+				}
+			},
+			['Label'] = {
+				['Background'] = Color3.fromRGB(25, 35, 35),
+			},
+			['Dropdown'] = {
+				['Background'] = Color3.fromRGB(25, 35, 35),
+				['Value Background'] = Color3.fromRGB(20, 25, 25),
+				['Value Stroke'] = Color3.fromRGB(230, 255, 240),
+				['Dropdown Select'] = {
+					['Background'] = Color3.fromRGB(20, 25, 25),
+					['Search'] = Color3.fromRGB(30, 40, 40),
+					['Item Background'] = Color3.fromRGB(35, 45, 45),
+				}
+			},
+			['Slider'] = {
+				['Background'] = Color3.fromRGB(25, 35, 35),
+				['Value Background'] = Color3.fromRGB(20, 25, 25),
+				['Value Stroke'] = Color3.fromRGB(230, 255, 240),
+				['Slider Bar'] = Color3.fromRGB(35, 60, 50),
+				['Slider Bar Value'] = Color3.fromRGB(50, 168, 128),
+				['Circle Value'] = Color3.fromRGB(230, 255, 240),
+			},
+			['Code'] = {
+				['Background'] = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(25, 35, 35)), ColorSequenceKeypoint.new(1, Color3.fromRGB(25, 35, 35))},
+				['Background Code'] = Color3.fromRGB(40, 60, 60),
+				['Background Code Value'] = Color3.fromRGB(30, 45, 45),
+				['ScrollingFrame Code'] = Color3.fromRGB(120, 200, 160),
+			},
+			['Button'] = {
+				['Background'] = Color3.fromRGB(25, 35, 35),
+				['Click'] = Color3.fromRGB(230, 255, 240),
+			},
+			['Textbox'] = {
+				['Background'] = Color3.fromRGB(25, 35, 35),
+				['Value Background'] = Color3.fromRGB(20, 25, 25),
+				['Value Stroke'] = Color3.fromRGB(230, 255, 240),
+			},
+			['Keybind'] = {
+				['Background'] = Color3.fromRGB(25, 35, 35),
+				['Value Background'] = Color3.fromRGB(20, 25, 25),
+				['Value Stroke'] = Color3.fromRGB(230, 255, 240),
+				['True'] = {
+					['Toggle Background'] = Color3.fromRGB(35, 60, 50),
+					['Toggle Value'] = Color3.fromRGB(50, 168, 128),
+				},
+				['False'] = {
+					['Toggle Background'] = Color3.fromRGB(30, 40, 40),
+					['Toggle Value'] = Color3.fromRGB(40, 50, 50),
+				}
+			},
+			['Color Picker'] = {
+				['Background'] = Color3.fromRGB(25, 35, 35),
+				['Color Select'] = {
+					['Background'] = Color3.fromRGB(20, 25, 25),
+					['UIStroke'] = Color3.fromRGB(230, 255, 240),
+				}
+			}
+		}
+	},
+	Crimson = {
+		['Shadow'] = Color3.fromRGB(25, 20, 20),
+		['Background'] = Color3.fromRGB(35, 25, 25),
+		['Page'] = Color3.fromRGB(25, 20, 20),
+		['Main'] = Color3.fromRGB(180, 50, 60),
+		['Text & Icon'] = Color3.fromRGB(255, 230, 230),
+		['Function'] = {
+			['Toggle'] = {
+				['Background'] = Color3.fromRGB(35, 25, 25),
+				['True'] = {
+					['Toggle Background'] = Color3.fromRGB(60, 35, 40),
+					['Toggle Value'] = Color3.fromRGB(180, 50, 60),
+				},
+				['False'] = {
+					['Toggle Background'] = Color3.fromRGB(40, 30, 30),
+					['Toggle Value'] = Color3.fromRGB(50, 40, 40),
+				}
+			},
+			['Label'] = {
+				['Background'] = Color3.fromRGB(35, 25, 25),
+			},
+			['Dropdown'] = {
+				['Background'] = Color3.fromRGB(35, 25, 25),
+				['Value Background'] = Color3.fromRGB(25, 20, 20),
+				['Value Stroke'] = Color3.fromRGB(255, 230, 230),
+				['Dropdown Select'] = {
+					['Background'] = Color3.fromRGB(25, 20, 20),
+					['Search'] = Color3.fromRGB(40, 30, 30),
+					['Item Background'] = Color3.fromRGB(45, 35, 35),
+				}
+			},
+			['Slider'] = {
+				['Background'] = Color3.fromRGB(35, 25, 25),
+				['Value Background'] = Color3.fromRGB(25, 20, 20),
+				['Value Stroke'] = Color3.fromRGB(255, 230, 230),
+				['Slider Bar'] = Color3.fromRGB(60, 35, 40),
+				['Slider Bar Value'] = Color3.fromRGB(180, 50, 60),
+				['Circle Value'] = Color3.fromRGB(255, 230, 230),
+			},
+			['Code'] = {
+				['Background'] = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(35, 25, 25)), ColorSequenceKeypoint.new(1, Color3.fromRGB(35, 25, 25))},
+				['Background Code'] = Color3.fromRGB(60, 40, 40),
+				['Background Code Value'] = Color3.fromRGB(45, 30, 30),
+				['ScrollingFrame Code'] = Color3.fromRGB(200, 120, 130),
+			},
+			['Button'] = {
+				['Background'] = Color3.fromRGB(35, 25, 25),
+				['Click'] = Color3.fromRGB(255, 230, 230),
+			},
+			['Textbox'] = {
+				['Background'] = Color3.fromRGB(35, 25, 25),
+				['Value Background'] = Color3.fromRGB(25, 20, 20),
+				['Value Stroke'] = Color3.fromRGB(255, 230, 230),
+			},
+			['Keybind'] = {
+				['Background'] = Color3.fromRGB(35, 25, 25),
+				['Value Background'] = Color3.fromRGB(25, 20, 20),
+				['Value Stroke'] = Color3.fromRGB(255, 230, 230),
+				['True'] = {
+					['Toggle Background'] = Color3.fromRGB(60, 35, 40),
+					['Toggle Value'] = Color3.fromRGB(180, 50, 60),
+				},
+				['False'] = {
+					['Toggle Background'] = Color3.fromRGB(40, 30, 30),
+					['Toggle Value'] = Color3.fromRGB(50, 40, 40),
+				}
+			},
+			['Color Picker'] = {
+				['Background'] = Color3.fromRGB(35, 25, 25),
+				['Color Select'] = {
+					['Background'] = Color3.fromRGB(25, 20, 20),
+					['UIStroke'] = Color3.fromRGB(255, 230, 230),
+				}
+			}
+		}
+	}
 }
 
 local ScreenGui = Instance.new("ScreenGui")
@@ -458,8 +610,7 @@ do
 			Image.BorderSizePixel = 0
 			Image.Size = UDim2.new(0, 40,1, 0)
 
-			if Icon and Icon ~= '' then
-Icon_1.Name = "Icon"
+			Icon_1.Name = "Icon"
 			Icon_1.Parent = Image
 			Icon_1.AnchorPoint = Vector2.new(0.5, 0.5)
 			Icon_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
@@ -483,10 +634,6 @@ Icon_1.Name = "Icon"
 			Frame_1.Size = UDim2.new(0, 1,0.699999988, 0)
 
 			addToTheme('Text & Icon', Icon_1)
-else
-	Icon_1.Visible = false
-	Icon_1.Size = UDim2.new(0,0,0,0)
-end
 
 			addToTheme('Text & Icon', Frame_1)
 		end
@@ -1052,11 +1199,10 @@ function Library:Window(p)
 
 	local Title = p.Title or 'null'
 	local Desc = p.Desc or ''
-	local Icon = p.Icon
+	local Icon = p.Icon or 'door-open'
 	local Theme = p.Theme or 'Dark'
-	local Keybind = p.Config and p.Config.Keybind or Enum.KeyCode.LeftControl
-	local Size = p.Config and p.Config.Size or UDim2.new(0, 530,0, 400)
-	local CloseUIButton = p.CloseUIButton or {Enabled = false}
+	local Keybind = p.Config.Keybind or Enum.KeyCode.LeftControl
+	local Size = p.Config.Size or UDim2.new(0, 530,0, 400)
 
 	local R, HAA = false, false
 	local HasChangeTheme = p.Theme
@@ -1102,60 +1248,7 @@ function Library:Window(p)
 	Background_1.ClipsDescendants = true
 	Background_1.GroupTransparency = 1
 
-	Shadow_1.Visible = true
-	-- Topbar (Title/Desc) and CloseUIButton handling
-	local Topbar = Instance.new("Frame")
-	Topbar.Name = "Topbar"
-	Topbar.Parent = Background_1
-	Topbar.Size = UDim2.new(1, 0, 0, 40)
-	Topbar.BackgroundTransparency = 1
-
-	local TitleLabel = Instance.new("TextLabel")
-	TitleLabel.Parent = Topbar
-	TitleLabel.AnchorPoint = Vector2.new(0.5, 0)
-	TitleLabel.Position = UDim2.new(0.5, 0, 0, 5)
-	TitleLabel.Size = UDim2.new(0.9, 0, 0, 18)
-	TitleLabel.Font = Enum.Font.GothamBold
-	TitleLabel.Text = Title
-	TitleLabel.TextColor3 = themes[Theme]["Text & Icon"] or Color3.fromRGB(255,255,255)
-	TitleLabel.TextSize = 14
-	TitleLabel.BackgroundTransparency = 1
-
-	local DescLabel = Instance.new("TextLabel")
-	DescLabel.Parent = Topbar
-	DescLabel.AnchorPoint = Vector2.new(0.5, 0)
-	DescLabel.Position = UDim2.new(0.5, 0, 0, 22)
-	DescLabel.Size = UDim2.new(0.9, 0, 0, 14)
-	DescLabel.Font = Enum.Font.Gotham
-	DescLabel.Text = Desc
-	DescLabel.TextColor3 = themes[Theme]["Text & Icon"] or Color3.fromRGB(255,255,255)
-	DescLabel.TextTransparency = 0.4
-	DescLabel.TextSize = 11
-	DescLabel.BackgroundTransparency = 1
-
-	if CloseUIButton and CloseUIButton.Enabled then
-		local CloseButton = Instance.new("ImageButton")
-		CloseButton.Parent = Topbar
-		CloseButton.Size = UDim2.new(0, 20, 0, 20)
-		CloseButton.Position = UDim2.new(1, -30, 0, 10)
-		CloseButton.Image = CloseUIButton.Icon or "rbxassetid://91742863926517"
-		CloseButton.ImageTransparency = 0.5
-		CloseButton.BackgroundTransparency = 1
-
-		CloseButton.MouseEnter:Connect(function()
-			CloseButton.ImageTransparency = 0.2
-		end)
-		CloseButton.MouseLeave:Connect(function()
-			CloseButton.ImageTransparency = 0.5
-		end)
-		CloseButton.MouseButton1Click:Connect(function()
-			Tw = game:GetService("TweenService")
-			Tw:Create(Shadow_1, TweenInfo.new(0.25), {ImageTransparency = 1}):Play()
-			task.wait(0.25)
-			ScreenGui:Destroy()
-		end)
-	end
-  
+	Shadow_1.Visible = true  
 	local org = Background_1.Size
 	Background_1.Size = org - UDim2.fromOffset(5, 5)
 	tw({
@@ -1184,7 +1277,7 @@ function Library:Window(p)
 
 	UIPadding_2.Parent = Page_1
 	UIPadding_2.PaddingBottom = UDim.new(0,5)
-	UIPadding_2.PaddingLeft = UDim.new(0, Icon and 120 or 10)
+	UIPadding_2.PaddingLeft = UDim.new(0,120)
 	UIPadding_2.PaddingRight = UDim.new(0,5)
 	UIPadding_2.PaddingTop = UDim.new(0,45)
 
@@ -1268,13 +1361,7 @@ function Library:Window(p)
 	Close_1.BorderSizePixel = 0
 	Close_1.LayoutOrder = 3
 	Close_1.Size = UDim2.new(0, 16,0, 16)
-	if CloseUIButton and CloseUIButton.Enabled then
-	Close_1.Image = CloseUIButton.Icon or "rbxassetid://91742863926517"
-	Close_1.Visible = true
-else
 	Close_1.Image = "rbxassetid://15082305656"
-	Close_1.Visible = false
-end
 
 	ChSize_1.Name = "Size"
 	ChSize_1.Parent = Ct_1
@@ -1380,15 +1467,6 @@ end
 	Title_2.TextXAlignment = Enum.TextXAlignment.Left
 
 	addToTheme('Text & Icon', Title_2)
-
--- CloseUIButton handler injected
-if CloseUIButton and CloseUIButton.Enabled then
-	Close_1.MouseButton1Click:Connect(function()
-		tw({v = Background_1, t = 0.25, s = Enum.EasingStyle.Linear, d = "Out", g = {GroupTransparency = 1}}):Play()
-		task.wait(0.25)
-		Shadow_1:Destroy()
-	end)
-end
 
 	local TabP_1 = Instance.new("Frame")
 	local Frame_6 = Instance.new("Frame")
@@ -4577,60 +4655,7 @@ end
 				close.Completed:Wait()
 				Shadow_1.Visible = false
 			else
-				Shadow_1.Visible = true
-	-- Topbar (Title/Desc) and CloseUIButton handling
-	local Topbar = Instance.new("Frame")
-	Topbar.Name = "Topbar"
-	Topbar.Parent = Background_1
-	Topbar.Size = UDim2.new(1, 0, 0, 40)
-	Topbar.BackgroundTransparency = 1
-
-	local TitleLabel = Instance.new("TextLabel")
-	TitleLabel.Parent = Topbar
-	TitleLabel.AnchorPoint = Vector2.new(0.5, 0)
-	TitleLabel.Position = UDim2.new(0.5, 0, 0, 5)
-	TitleLabel.Size = UDim2.new(0.9, 0, 0, 18)
-	TitleLabel.Font = Enum.Font.GothamBold
-	TitleLabel.Text = Title
-	TitleLabel.TextColor3 = themes[Theme]["Text & Icon"] or Color3.fromRGB(255,255,255)
-	TitleLabel.TextSize = 14
-	TitleLabel.BackgroundTransparency = 1
-
-	local DescLabel = Instance.new("TextLabel")
-	DescLabel.Parent = Topbar
-	DescLabel.AnchorPoint = Vector2.new(0.5, 0)
-	DescLabel.Position = UDim2.new(0.5, 0, 0, 22)
-	DescLabel.Size = UDim2.new(0.9, 0, 0, 14)
-	DescLabel.Font = Enum.Font.Gotham
-	DescLabel.Text = Desc
-	DescLabel.TextColor3 = themes[Theme]["Text & Icon"] or Color3.fromRGB(255,255,255)
-	DescLabel.TextTransparency = 0.4
-	DescLabel.TextSize = 11
-	DescLabel.BackgroundTransparency = 1
-
-	if CloseUIButton and CloseUIButton.Enabled then
-		local CloseButton = Instance.new("ImageButton")
-		CloseButton.Parent = Topbar
-		CloseButton.Size = UDim2.new(0, 20, 0, 20)
-		CloseButton.Position = UDim2.new(1, -30, 0, 10)
-		CloseButton.Image = CloseUIButton.Icon or "rbxassetid://91742863926517"
-		CloseButton.ImageTransparency = 0.5
-		CloseButton.BackgroundTransparency = 1
-
-		CloseButton.MouseEnter:Connect(function()
-			CloseButton.ImageTransparency = 0.2
-		end)
-		CloseButton.MouseLeave:Connect(function()
-			CloseButton.ImageTransparency = 0.5
-		end)
-		CloseButton.MouseButton1Click:Connect(function()
-			Tw = game:GetService("TweenService")
-			Tw:Create(Shadow_1, TweenInfo.new(0.25), {ImageTransparency = 1}):Play()
-			task.wait(0.25)
-			ScreenGui:Destroy()
-		end)
-	end
-  
+				Shadow_1.Visible = true  
 				local open = tw({
 					v = Background_1,
 					t = 0.15,
