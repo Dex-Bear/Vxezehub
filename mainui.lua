@@ -2,7 +2,7 @@ Library = {}
 SaveTheme = {}
 
 local themes = {
-	index = {'Dark', 'Amethyst', 'Emerald', 'Crimson', 'Sapphire', 'Amber', 'Onyx', },
+	index = {'Dark', 'Amethyst', 'Emerald', 'Crimson', 'Sapphire', 'Amber', 'Onyx'},
 	Amethyst = {
 		['Shadow'] = Color3.fromRGB(24, 24, 31),
 		['Background'] = Color3.fromRGB(29, 28, 38),
@@ -535,7 +535,86 @@ local themes = {
 			}
 		}
 	},
-	
+	-- Add new themes here, following the same structure as the existing ones.
+	-- Example placeholder for a new theme:
+	--[[
+	NewThemeName = {
+		['Shadow'] = Color3.fromRGB(R, G, B),
+		['Background'] = Color3.fromRGB(R, G, B),
+		['Page'] = Color3.fromRGB(R, G, B),
+		['Main'] = Color3.fromRGB(R, G, B),
+		['Text & Icon'] = Color3.fromRGB(R, G, B),
+		['Function'] = {
+			['Toggle'] = {
+				['Background'] = Color3.fromRGB(R, G, B),
+				['True'] = {
+					['Toggle Background'] = Color3.fromRGB(R, G, B),
+					['Toggle Value'] = Color3.fromRGB(R, G, B),
+				},
+				['False'] = {
+					['Toggle Background'] = Color3.fromRGB(R, G, B),
+					['Toggle Value'] = Color3.fromRGB(R, G, B),
+				}
+			},
+			['Label'] = {
+				['Background'] = Color3.fromRGB(R, G, B),
+			},
+			['Dropdown'] = {
+				['Background'] = Color3.fromRGB(R, G, B),
+				['Value Background'] = Color3.fromRGB(R, G, B),
+				['Value Stroke'] = Color3.fromRGB(R, G, B),
+				['Dropdown Select'] = {
+					['Background'] = Color3.fromRGB(R, G, B),
+					['Search'] = Color3.fromRGB(R, G, B),
+					['Item Background'] = Color3.fromRGB(R, G, B),
+				}
+			},
+			['Slider'] = {
+				['Background'] = Color3.fromRGB(R, G, B),
+				['Value Background'] = Color3.fromRGB(R, G, B),
+				['Value Stroke'] = Color3.fromRGB(R, G, B),
+				['Slider Bar'] = Color3.fromRGB(R, G, B),
+				['Slider Bar Value'] = Color3.fromRGB(R, G, B),
+				['Circle Value'] = Color3.fromRGB(R, G, B),
+			},
+			['Code'] = {
+				['Background'] = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(R, G, B)), ColorSequenceKeypoint.new(1, Color3.fromRGB(R, G, B))},
+				['Background Code'] = Color3.fromRGB(R, G, B),
+				['Background Code Value'] = Color3.fromRGB(R, G, B),
+				['ScrollingFrame Code'] = Color3.fromRGB(R, G, B),
+			},
+			['Button'] = {
+				['Background'] = Color3.fromRGB(R, G, B),
+				['Click'] = Color3.fromRGB(R, G, B),
+			},
+			['Textbox'] = {
+				['Background'] = Color3.fromRGB(R, G, B),
+				['Value Background'] = Color3.fromRGB(R, G, B),
+				['Value Stroke'] = Color3.fromRGB(R, G, B),
+			},
+			['Keybind'] = {
+				['Background'] = Color3.fromRGB(R, G, B),
+				['Value Background'] = Color3.fromRGB(R, G, B),
+				['Value Stroke'] = Color3.fromRGB(R, G, B),
+				['True'] = {
+					['Toggle Background'] = Color3.fromRGB(R, G, B),
+					['Toggle Value'] = Color3.fromRGB(R, G, B),
+				},
+				['False'] = {
+					['Toggle Background'] = Color3.fromRGB(R, G, B),
+					['Toggle Value'] = Color3.fromRGB(R, G, B),
+				}
+			},
+			['Color Picker'] = {
+				['Background'] = Color3.fromRGB(R, G, B),
+				['Color Select'] = {
+					['Background'] = Color3.fromRGB(R, G, B),
+					['UIStroke'] = Color3.fromRGB(R, G, B),
+				}
+			}
+		}
+	},
+	--]]
 }
 
 local ScreenGui = Instance.new("ScreenGui")
@@ -5105,6 +5184,49 @@ function Library:Window(p)
 	end
 
 	return Tabs
+
+if p.CloseUIButton and p.CloseUIButton.Enabled then
+    local CloseBtnFrame = Instance.new("Frame")
+    CloseBtnFrame.Name = "CloseUIButton"
+    CloseBtnFrame.Parent = Background_1
+    CloseBtnFrame.AnchorPoint = Vector2.new(0.5, 1)
+    CloseBtnFrame.Position = UDim2.new(0.5, 0, 1, -15)
+    CloseBtnFrame.Size = UDim2.new(0, 35, 0, 35)
+    CloseBtnFrame.BackgroundColor3 = Color3.fromRGB(91, 68, 209)
+    CloseBtnFrame.BorderSizePixel = 0
+
+    local UICorner = Instance.new("UICorner")
+    UICorner.CornerRadius = UDim.new(0, 8)
+    UICorner.Parent = CloseBtnFrame
+
+    if p.CloseUIButton.Image then
+        local CloseImage = Instance.new("ImageLabel")
+        CloseImage.Parent = CloseBtnFrame
+        CloseImage.AnchorPoint = Vector2.new(0.5, 0.5)
+        CloseImage.Position = UDim2.new(0.5, 0, 0.5, 0)
+        CloseImage.Size = UDim2.new(0, 20, 0, 20)
+        CloseImage.BackgroundTransparency = 1
+        CloseImage.Image = tostring(p.CloseUIButton.Image)
+        CloseImage.ImageTransparency = 0.1
+        addToTheme("Text & Icon", CloseImage)
+    end
+
+    addToTheme("Main", CloseBtnFrame)
+
+    local ClickClose = click(CloseBtnFrame)
+    ClickClose.MouseButton1Click:Connect(function()
+        tw({
+            v = Background_1,
+            t = 0.25,
+            s = Enum.EasingStyle.Linear,
+            d = "Out",
+            g = {GroupTransparency = 1}
+        }):Play()
+        task.wait(0.25)
+        ScreenGui:Destroy()
+    end)
+end
+
 end
 
 return Library
