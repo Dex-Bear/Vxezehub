@@ -1047,8 +1047,7 @@ function Library:Window(p)
 
 	local Title = p.Title or 'null'
 	local Desc = p.Desc or ''
-	local 
-	local Theme = p.Theme or 'Dark'
+	local local Theme = p.Theme or 'Dark'
 	local Keybind = p.Config.Keybind or Enum.KeyCode.LeftControl
 	local Size = p.Config.Size or UDim2.new(0, 530,0, 400)
 
@@ -1210,6 +1209,13 @@ function Library:Window(p)
 	Close_1.LayoutOrder = 3
 	Close_1.Size = UDim2.new(0, 16,0, 16)
 	Close_1.Image = "rbxassetid://15082305656"
+
+        -- Added: Support custom icon from CloseUIButton
+        if p.CloseUIButton and p.CloseUIButton.Icon then
+            Close_1.Image = gl(p.CloseUIButton.Icon).Image
+            Close_1.ImageRectSize = gl(p.CloseUIButton.Icon).ImageRectSize
+            Close_1.ImageRectOffset = gl(p.CloseUIButton.Icon).ImageRectPosition
+        end
 
 	ChSize_1.Name = "Size"
 	ChSize_1.Parent = Ct_1
@@ -1445,8 +1451,7 @@ function Library:Window(p)
 
 	function Tabs:Tab(p)
 		local Title = p.Title or 'null'
-		local 
-		local Tab_1 = Instance.new("Frame")
+		local local Tab_1 = Instance.new("Frame")
 		local Title_3 = Instance.new("TextLabel")
 		local UIListLayout_9 = Instance.new("UIListLayout")
 		local ImageLabel_2 = Instance.new("ImageLabel")
