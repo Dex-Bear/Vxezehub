@@ -4639,16 +4639,19 @@ function Library:Window(p)
 
 		do
     local CloseUI = p.CloseUIButton
-    local CloseButton = Instance.new("Frame")
+    local CloseButton = Instance.new("ImageButton")
     local UICorner = Instance.new("UICorner")
     local UIStroke = Instance.new("UIStroke")
-    local CloseIcon = Instance.new("ImageLabel")
 
     CloseButton.Name = "CloseButton"
     CloseButton.Parent = ScreenGui
     CloseButton.Size = UDim2.new(0, 44, 0, 44)
     CloseButton.Position = UDim2.new(0, 0, 0.2, 0)
     CloseButton.BackgroundColor3 = Color3.fromRGB(29, 28, 38)
+    CloseButton.Image = CloseUI.Image
+    CloseButton.ScaleType = Enum.ScaleType.Fit
+    CloseButton.ImageColor3 = Color3.fromRGB(255, 255, 255)
+    CloseButton.BackgroundTransparency = 0
     CloseButton.ClipsDescendants = true
     CloseButton.Visible = CloseUI.Enabled
 
@@ -4658,23 +4661,14 @@ function Library:Window(p)
     UIStroke.Parent = CloseButton
     UIStroke.Thickness = 2
     UIStroke.Color = Color3.fromRGB(0, 0, 0)
-
-    CloseIcon.Name = "CloseIcon"
-    CloseIcon.Parent = CloseButton
-    CloseIcon.AnchorPoint = Vector2.new(0.5, 0.5)
-    CloseIcon.Position = UDim2.new(0.5, 0, 0.5, 0)
-    CloseIcon.Size = UDim2.new(0.6, 0, 0.6, 0)
-    CloseIcon.BackgroundTransparency = 1
-    CloseIcon.Image = CloseUI.Image
-    CloseIcon.ImageColor3 = Color3.fromRGB(255, 255, 255)
-    CloseIcon.ScaleType = Enum.ScaleType.Fit
+    UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 
     local Click = click(CloseButton)
     lak(Click, CloseButton)
     Click.MouseButton1Click:Connect(function()
-        tw({v = CloseIcon, t = 0.15, s = Enum.EasingStyle.Back, d = "Out", g = {Size = UDim2.new(0.5, 0, 0.5, 0)}}):Play()
+        tw({v = CloseButton, t = 0.15, s = Enum.EasingStyle.Back, d = "Out", g = {Size = UDim2.new(0, 38, 0, 38)}}):Play()
         delay(0.06, function()
-            tw({v = CloseIcon, t = 0.15, s = Enum.EasingStyle.Back, d = "Out", g = {Size = UDim2.new(0.6, 0, 0.6, 0)}}):Play()
+            tw({v = CloseButton, t = 0.15, s = Enum.EasingStyle.Back, d = "Out", g = {Size = UDim2.new(0, 44, 0, 44)}}):Play()
         end)
         pcall(closeui)
     end)
