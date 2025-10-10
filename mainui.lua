@@ -2035,7 +2035,7 @@ function Library:Window(p)
 
 	local Title = p.Title or 'null'
 	local Desc = p.Desc or ''
-	local Icon = p.Icon or 'door-open'
+	local Icon = p.Icon or 'wave'
 	local Theme = p.Theme or 'Dark'
 	local Keybind = p.Config.Keybind or Enum.KeyCode.LeftControl
 	local Size = p.Config.Size or UDim2.new(0, 530,0, 400)
