@@ -4659,7 +4659,7 @@ function Library:Window(p)
 
     UICornerCloseUIShadow.Name = "UICornerCloseUIShadow"
     UICornerCloseUIShadow.Parent = CloseUIShadow
-    UICornerCloseUIShadow.CornerRadius = UDim.new(0, 5)
+    UICornerCloseUIShadow.CornerRadius = UDim.new(0, 7)
 
     addToTheme('Shadow', CloseUIShadow)
 
@@ -4684,7 +4684,7 @@ function Library:Window(p)
 
     UICornerCloseUI_1.Name = "UICornerCloseUI"
     UICornerCloseUI_1.Parent = BackgroundCloseUI_1
-    UICornerCloseUI_1.CornerRadius = UDim.new(0, 5)
+    UICornerCloseUI_1.CornerRadius = UDim.new(0, 7)
 
     FrameCloseUI_1.Name = "FrameCloseUI"
     FrameCloseUI_1.Parent = BackgroundCloseUI_1
