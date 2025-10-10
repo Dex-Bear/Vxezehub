@@ -4652,7 +4652,7 @@ function Library:Window(p)
     CloseUIShadow.BackgroundColor3 = Color3.fromRGB(163, 162, 165)
     CloseUIShadow.BackgroundTransparency = 1
     CloseUIShadow.Position = UDim2.new(0, 0, 0.200000003, 0)
-    CloseUIShadow.Size = UDim2.new(0, 44, 0, 44)
+    CloseUIShadow.Size = UDim2.new(0, 52, 0, 52)
     CloseUIShadow.Image = "rbxassetid://1316045217"
     CloseUIShadow.ImageColor3 = Color3.fromRGB(24, 24, 31)
     CloseUIShadow.ImageTransparency = 0.5
@@ -4662,16 +4662,16 @@ function Library:Window(p)
 
     UICornerCloseUIShadow.Name = "UICornerCloseUIShadow"
     UICornerCloseUIShadow.Parent = CloseUIShadow
-    UICornerCloseUIShadow.CornerRadius = UDim.new(0, 6)
+    UICornerCloseUIShadow.CornerRadius = UDim.new(0, 8)
 
     addToTheme('Shadow', CloseUIShadow)
 
     UIPaddingCloseUI_1.Name = "UIPaddingCloseUI"
     UIPaddingCloseUI_1.Parent = CloseUIShadow
-    UIPaddingCloseUI_1.PaddingBottom = UDim.new(0, 10)
-    UIPaddingCloseUI_1.PaddingLeft = UDim.new(0, 10)
-    UIPaddingCloseUI_1.PaddingRight = UDim.new(0, 10)
-    UIPaddingCloseUI_1.PaddingTop = UDim.new(0, 10)
+    UIPaddingCloseUI_1.PaddingBottom = UDim.new(0, 14)
+    UIPaddingCloseUI_1.PaddingLeft = UDim.new(0, 14)
+    UIPaddingCloseUI_1.PaddingRight = UDim.new(0, 14)
+    UIPaddingCloseUI_1.PaddingTop = UDim.new(0, 14)
 
     BackgroundCloseUI_1.Name = "BackgroundCloseUI"
     BackgroundCloseUI_1.Parent = CloseUIShadow
@@ -4687,7 +4687,7 @@ function Library:Window(p)
 
     UICornerCloseUI_1.Name = "UICornerCloseUI"
     UICornerCloseUI_1.Parent = BackgroundCloseUI_1
-    UICornerCloseUI_1.CornerRadius = UDim.new(0, 6)
+    UICornerCloseUI_1.CornerRadius = UDim.new(0, 8)
 
     FrameCloseUI_1.Name = "FrameCloseUI"
     FrameCloseUI_1.Parent = BackgroundCloseUI_1
