@@ -4649,15 +4649,12 @@ function Library:Window(p)
 
     CloseUIShadow.Name = "CloseUIShadow"
     CloseUIShadow.Parent = ScreenGui
-    CloseUIShadow.BackgroundColor3 = Color3.fromRGB(163, 162, 165)
-    CloseUIShadow.BackgroundTransparency = 1
+    CloseUIShadow.BackgroundColor3 = Color3.fromRGB(29, 28, 38)
+    CloseUIShadow.BackgroundTransparency = 0
     CloseUIShadow.Position = UDim2.new(0, 0, 0.200000003, 0)
     CloseUIShadow.Size = UDim2.new(0, 52, 0, 52)
-    CloseUIShadow.Image = "rbxassetid://1316045217"
-    CloseUIShadow.ImageColor3 = Color3.fromRGB(24, 24, 31)
-    CloseUIShadow.ImageTransparency = 0.5
-    CloseUIShadow.ScaleType = Enum.ScaleType.Slice
-    CloseUIShadow.SliceCenter = Rect.new(10, 10, 118, 118)
+    CloseUIShadow.ImageTransparency = 1
+    CloseUIShadow.ScaleType = Enum.ScaleType.Fit
     CloseUIShadow.Visible = CloseUI.Enabled
 
     UICornerCloseUIShadow.Name = "UICornerCloseUIShadow"
