@@ -4652,7 +4652,7 @@ function Library:Window(p)
     CloseUIShadow.BackgroundColor3 = Color3.fromRGB(29, 28, 38)
     CloseUIShadow.BackgroundTransparency = 0
     CloseUIShadow.Position = UDim2.new(0, 0, 0.200000003, 0)
-    CloseUIShadow.Size = UDim2.new(0, 52, 0, 52)
+    CloseUIShadow.Size = UDim2.new(0, 40, 0, 40)
     CloseUIShadow.ImageTransparency = 1
     CloseUIShadow.ScaleType = Enum.ScaleType.Fit
     CloseUIShadow.Visible = CloseUI.Enabled
@@ -4665,10 +4665,10 @@ function Library:Window(p)
 
     UIPaddingCloseUI_1.Name = "UIPaddingCloseUI"
     UIPaddingCloseUI_1.Parent = CloseUIShadow
-    UIPaddingCloseUI_1.PaddingBottom = UDim.new(0, 14)
-    UIPaddingCloseUI_1.PaddingLeft = UDim.new(0, 14)
-    UIPaddingCloseUI_1.PaddingRight = UDim.new(0, 14)
-    UIPaddingCloseUI_1.PaddingTop = UDim.new(0, 14)
+    UIPaddingCloseUI_1.PaddingBottom = UDim.new(0, 8)
+    UIPaddingCloseUI_1.PaddingLeft = UDim.new(0, 8)
+    UIPaddingCloseUI_1.PaddingRight = UDim.new(0, 8)
+    UIPaddingCloseUI_1.PaddingTop = UDim.new(0, 8)
 
     BackgroundCloseUI_1.Name = "BackgroundCloseUI"
     BackgroundCloseUI_1.Parent = CloseUIShadow
