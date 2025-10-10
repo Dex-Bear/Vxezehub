@@ -4659,23 +4659,23 @@ function Library:Window(p)
 
     UICornerCloseUIShadow.Name = "UICornerCloseUIShadow"
     UICornerCloseUIShadow.Parent = CloseUIShadow
-    UICornerCloseUIShadow.CornerRadius = UDim.new(0, 7)
+    UICornerCloseUIShadow.CornerRadius = UDim.new(1, 0)
 
     addToTheme('Shadow', CloseUIShadow)
 
     UIPaddingCloseUI_1.Name = "UIPaddingCloseUI"
     UIPaddingCloseUI_1.Parent = CloseUIShadow
-    UIPaddingCloseUI_1.PaddingBottom = UDim.new(0, 4)
-    UIPaddingCloseUI_1.PaddingLeft = UDim.new(0, 4)
-    UIPaddingCloseUI_1.PaddingRight = UDim.new(0, 4)
-    UIPaddingCloseUI_1.PaddingTop = UDim.new(0, 4)
+    UIPaddingCloseUI_1.PaddingBottom = UDim.new(0, 3)
+    UIPaddingCloseUI_1.PaddingLeft = UDim.new(0, 3)
+    UIPaddingCloseUI_1.PaddingRight = UDim.new(0, 3)
+    UIPaddingCloseUI_1.PaddingTop = UDim.new(0, 3)
 
     BackgroundCloseUI_1.Name = "BackgroundCloseUI"
     BackgroundCloseUI_1.Parent = CloseUIShadow
     BackgroundCloseUI_1.AnchorPoint = Vector2.new(0.5, 0.5)
     BackgroundCloseUI_1.BackgroundColor3 = Color3.fromRGB(29, 28, 38)
     BackgroundCloseUI_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
-    BackgroundCloseUI_1.BorderSizePixel = 0
+    BackgroundCloseUI_1.BorderSizePixel = 2
     BackgroundCloseUI_1.Position = UDim2.new(0.5, 0, 0.5, 0)
     BackgroundCloseUI_1.Size = UDim2.new(1, 0, 1, 0)
     BackgroundCloseUI_1.ClipsDescendants = true
@@ -4684,22 +4684,20 @@ function Library:Window(p)
 
     UICornerCloseUI_1.Name = "UICornerCloseUI"
     UICornerCloseUI_1.Parent = BackgroundCloseUI_1
-    UICornerCloseUI_1.CornerRadius = UDim.new(0, 7)
+    UICornerCloseUI_1.CornerRadius = UDim.new(1, 0)
 
     FrameCloseUI_1.Name = "FrameCloseUI"
     FrameCloseUI_1.Parent = BackgroundCloseUI_1
     FrameCloseUI_1.AnchorPoint = Vector2.new(0, 1)
-    FrameCloseUI_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    FrameCloseUI_1.BackgroundTransparency = 0.9
-    FrameCloseUI_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    FrameCloseUI_1.BackgroundTransparency = 1
     FrameCloseUI_1.BorderSizePixel = 0
     FrameCloseUI_1.Position = UDim2.new(0, 0, 1, 0)
-    FrameCloseUI_1.Size = UDim2.new(1, 0, 0, 2)
+    FrameCloseUI_1.Size = UDim2.new(1, 0, 0, 0)
 
     CloseIcon.Name = "CloseIcon"
     CloseIcon.Parent = BackgroundCloseUI_1
     CloseIcon.BackgroundTransparency = 1
-    CloseIcon.Size = UDim2.new(0, 32, 0, 32)
+    CloseIcon.Size = UDim2.new(0, 28, 0, 28)
     CloseIcon.Position = UDim2.new(0.5, 0, 0.5, 0)
     CloseIcon.AnchorPoint = Vector2.new(0.5, 0.5)
     CloseIcon.Image = CloseUI.Image
@@ -4710,9 +4708,9 @@ function Library:Window(p)
     local Click = click(CloseUIShadow)
     lak(Click, CloseUIShadow)
     Click.MouseButton1Click:Connect(function()
-        tw({v = CloseIcon, t = 0.15, s = Enum.EasingStyle.Back, d = "Out", g = {Size = UDim2.new(0, 28, 0, 28)}}):Play()
+        tw({v = CloseIcon, t = 0.15, s = Enum.EasingStyle.Back, d = "Out", g = {Size = UDim2.new(0, 24, 0, 24)}}):Play()
         delay(0.06, function()
-            tw({v = CloseIcon, t = 0.15, s = Enum.EasingStyle.Back, d = "Out", g = {Size = UDim2.new(0, 32, 0, 32)}}):Play()
+            tw({v = CloseIcon, t = 0.15, s = Enum.EasingStyle.Back, d = "Out", g = {Size = UDim2.new(0, 28, 0, 28)}}):Play()
         end)
         pcall(closeui)
     end)
