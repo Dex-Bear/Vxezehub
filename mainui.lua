@@ -4638,164 +4638,88 @@ function Library:Window(p)
 		end)
 
 		do
-	local CloseUI = p.CloseUIButton
-	local CloseUIShadow = Instance.new("ImageLabel")
-	local UIPaddingCloseUI_1 = Instance.new("UIPadding")
-	local BackgroundCloseUI_1 = Instance.new("Frame")
-	local UICornerCloseUI_1 = Instance.new("UICorner")
-	local FrameCloseUI_1 = Instance.new("Frame")
-	local Title_1
+    local CloseUI = p.CloseUIButton
+    local CloseUIShadow = Instance.new("ImageLabel")
+    local UICornerCloseUIShadow = Instance.new("UICorner")
+    local UIPaddingCloseUI_1 = Instance.new("UIPadding")
+    local BackgroundCloseUI_1 = Instance.new("Frame")
+    local UICornerCloseUI_1 = Instance.new("UICorner")
+    local FrameCloseUI_1 = Instance.new("Frame")
+    local CloseIcon = Instance.new("ImageLabel")
 
-	CloseUIShadow.Name = "CloseUIShadow"
-	CloseUIShadow.Parent = ScreenGui
-	CloseUIShadow.BackgroundColor3 = Color3.fromRGB(163,162,165)
-	CloseUIShadow.BackgroundTransparency = 1
-	CloseUIShadow.Position = UDim2.new(0, 0,0.200000003, 0)
-	CloseUIShadow.Size = UDim2.new(0, 70,0, 40)
-	CloseUIShadow.Image = "rbxassetid://1316045217"
-	CloseUIShadow.ImageColor3 = Color3.fromRGB(24,24,31)
-	CloseUIShadow.ImageTransparency = 0.5
-	CloseUIShadow.ScaleType = Enum.ScaleType.Slice
-	CloseUIShadow.SliceCenter = Rect.new(10, 10, 118, 118)
-	CloseUIShadow.Visible = CloseUI.Enabled
+    CloseUIShadow.Name = "CloseUIShadow"
+    CloseUIShadow.Parent = ScreenGui
+    CloseUIShadow.BackgroundColor3 = Color3.fromRGB(163, 162, 165)
+    CloseUIShadow.BackgroundTransparency = 1
+    CloseUIShadow.Position = UDim2.new(0, 0, 0.200000003, 0)
+    CloseUIShadow.Size = UDim2.new(0, 40, 0, 40)
+    CloseUIShadow.Image = "rbxassetid://1316045217"
+    CloseUIShadow.ImageColor3 = Color3.fromRGB(24, 24, 31)
+    CloseUIShadow.ImageTransparency = 0.5
+    CloseUIShadow.ScaleType = Enum.ScaleType.Slice
+    CloseUIShadow.SliceCenter = Rect.new(10, 10, 118, 118)
+    CloseUIShadow.Visible = CloseUI.Enabled
 
-	addToTheme('Shadow', CloseUIShadow)
+    UICornerCloseUIShadow.Name = "UICornerCloseUIShadow"
+    UICornerCloseUIShadow.Parent = CloseUIShadow
+    UICornerCloseUIShadow.CornerRadius = UDim.new(0, 6)
 
-	UIPaddingCloseUI_1.Name = "UIPaddingCloseUI"
-	UIPaddingCloseUI_1.Parent = CloseUIShadow
-	UIPaddingCloseUI_1.PaddingBottom = UDim.new(0,5)
-	UIPaddingCloseUI_1.PaddingLeft = UDim.new(0,5)
-	UIPaddingCloseUI_1.PaddingRight = UDim.new(0,5)
-	UIPaddingCloseUI_1.PaddingTop = UDim.new(0,5)
+    addToTheme('Shadow', CloseUIShadow)
 
-	BackgroundCloseUI_1.Name = "BackgroundCloseUI"
-	BackgroundCloseUI_1.Parent = CloseUIShadow
-	BackgroundCloseUI_1.AnchorPoint = Vector2.new(0.5, 0.5)
-	BackgroundCloseUI_1.BackgroundColor3 = Color3.fromRGB(29,28,38)
-	BackgroundCloseUI_1.BorderColor3 = Color3.fromRGB(0,0,0)
-	BackgroundCloseUI_1.BorderSizePixel = 0
-	BackgroundCloseUI_1.Position = UDim2.new(0.5, 0,0.5, 0)
-	BackgroundCloseUI_1.Size = UDim2.new(1, 0,1, 0)
-	BackgroundCloseUI_1.ClipsDescendants = true
+    UIPaddingCloseUI_1.Name = "UIPaddingCloseUI"
+    UIPaddingCloseUI_1.Parent = CloseUIShadow
+    UIPaddingCloseUI_1.PaddingBottom = UDim.new(0, 8)
+    UIPaddingCloseUI_1.PaddingLeft = UDim.new(0, 8)
+    UIPaddingCloseUI_1.PaddingRight = UDim.new(0, 8)
+    UIPaddingCloseUI_1.PaddingTop = UDim.new(0, 8)
 
-	addToTheme('Background', BackgroundCloseUI_1)
+    BackgroundCloseUI_1.Name = "BackgroundCloseUI"
+    BackgroundCloseUI_1.Parent = CloseUIShadow
+    BackgroundCloseUI_1.AnchorPoint = Vector2.new(0.5, 0.5)
+    BackgroundCloseUI_1.BackgroundColor3 = Color3.fromRGB(29, 28, 38)
+    BackgroundCloseUI_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    BackgroundCloseUI_1.BorderSizePixel = 0
+    BackgroundCloseUI_1.Position = UDim2.new(0.5, 0, 0.5, 0)
+    BackgroundCloseUI_1.Size = UDim2.new(1, 0, 1, 0)
+    BackgroundCloseUI_1.ClipsDescendants = true
 
-	UICornerCloseUI_1.Name = "UICornerCloseUI"
-	UICornerCloseUI_1.Parent = BackgroundCloseUI_1
-	UICornerCloseUI_1.CornerRadius = UDim.new(0,6)
+    addToTheme('Background', BackgroundCloseUI_1)
 
-	FrameCloseUI_1.Name = "FrameCloseUI"
-	FrameCloseUI_1.Parent = BackgroundCloseUI_1
-	FrameCloseUI_1.AnchorPoint = Vector2.new(0, 1)
-	FrameCloseUI_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
-	FrameCloseUI_1.BackgroundTransparency = 0.8999999761581421
-	FrameCloseUI_1.BorderColor3 = Color3.fromRGB(0,0,0)
-	FrameCloseUI_1.BorderSizePixel = 0
-	FrameCloseUI_1.Position = UDim2.new(0, 0,1, 0)
-	FrameCloseUI_1.Size = UDim2.new(1, 0,0, 4)
+    UICornerCloseUI_1.Name = "UICornerCloseUI"
+    UICornerCloseUI_1.Parent = BackgroundCloseUI_1
+    UICornerCloseUI_1.CornerRadius = UDim.new(0, 6)
 
-	-- create Title_1 as ImageLabel if Image provided, else as TextLabel (preserve original logic)
-	local isImage = (CloseUI and CloseUI.Image and tostring(CloseUI.Image) ~= "")
-	if isImage then
-		Title_1 = Instance.new("ImageLabel")
-		Title_1.Name = "Title"
-		Title_1.Parent = BackgroundCloseUI_1
-		Title_1.AutomaticSize = Enum.AutomaticSize.None
-		Title_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
-		Title_1.BackgroundTransparency = 1
-		Title_1.BorderColor3 = Color3.fromRGB(0,0,0)
-		Title_1.BorderSizePixel = 0
-		Title_1.Position = UDim2.new(0.5, 0,0.5, 0)
-		Title_1.AnchorPoint = Vector2.new(0.5,0.5)
-		Title_1.Size = UDim2.new(0, 26,0, 26)
-		Title_1.Image = tostring(CloseUI.Image)
-		Title_1.ImageTransparency = 0.05
-	else
-		Title_1 = Instance.new("TextLabel")
-		Title_1.Name = "Title"
-		Title_1.Parent = BackgroundCloseUI_1
-		Title_1.AutomaticSize = Enum.AutomaticSize.Y
-		Title_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
-		Title_1.BackgroundTransparency = 1
-		Title_1.BorderColor3 = Color3.fromRGB(0,0,0)
-		Title_1.BorderSizePixel = 0
-		Title_1.Size = UDim2.new(1, 0,1, 0)
-		Title_1.Font = Enum.Font.GothamBold
-		Title_1.RichText = true
-		Title_1.Text = CloseUI.Text
-		Title_1.TextColor3 = Color3.fromRGB(255,255,255)
-		Title_1.TextSize = 12
-	end
+    FrameCloseUI_1.Name = "FrameCloseUI"
+    FrameCloseUI_1.Parent = BackgroundCloseUI_1
+    FrameCloseUI_1.AnchorPoint = Vector2.new(0, 1)
+    FrameCloseUI_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    FrameCloseUI_1.BackgroundTransparency = 0.8999999761581421
+    FrameCloseUI_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    FrameCloseUI_1.BorderSizePixel = 0
+    FrameCloseUI_1.Position = UDim2.new(0, 0, 1, 0)
+    FrameCloseUI_1.Size = UDim2.new(1, 0, 0, 4)
 
-	addToTheme('Text & Icon', Title_1)
+    CloseIcon.Name = "CloseIcon"
+    CloseIcon.Parent = BackgroundCloseUI_1
+    CloseIcon.BackgroundTransparency = 1
+    CloseIcon.Size = UDim2.new(0, 24, 0, 24)
+    CloseIcon.Position = UDim2.new(0.5, 0, 0.5, 0)
+    CloseIcon.AnchorPoint = Vector2.new(0.5, 0.5)
+    CloseIcon.Image = CloseUI.Image
+    CloseIcon.ImageColor3 = Color3.fromRGB(255, 255, 255)
 
-	if isImage then
-		CloseUIShadow.Size = UDim2.new(0, 40,0, 40)
-	else
-		CloseUIShadow.Size = UDim2.new(0, Title_1.TextBounds.X + 40,0, 40)
-	end
+    addToTheme('Text & Icon', CloseIcon)
 
-	local Click = click(CloseUIShadow)
-	lak(Click, CloseUIShadow)
-	Click.MouseButton1Click:Connect(function()
-		if isImage then
-			tw({v = Title_1, t = 0.15, s = Enum.EasingStyle.Back, d = "Out", g = {Size = UDim2.new(0, 22, 0, 22)}}):Play()
-			delay(.06, function()
-				tw({v = Title_1, t = 0.15, s = Enum.EasingStyle.Back, d = "Out", g = {Size = UDim2.new(0, 26, 0, 26)}}):Play()
-			end)
-		else
-			tw({v = Title_1, t = 0.15, s = Enum.EasingStyle.Back, d = "Out", g = {TextSize = Title_1.TextSize - 2}}):Play()
-			delay(.06, function()
-				tw({v = Title_1, t = 0.15, s = Enum.EasingStyle.Back, d = "Out", g = {TextSize = 12}}):Play()
-			end)
-		end
-		pcall(closeui)
-	end)
-endants = true
-
-			addToTheme('Background', BackgroundCloseUI_1)
-
-			UICornerCloseUI_1.Name = "UICornerCloseUI"
-			UICornerCloseUI_1.Parent = BackgroundCloseUI_1
-			UICornerCloseUI_1.CornerRadius = UDim.new(0,6)
-
-			FrameCloseUI_1.Name = "FrameCloseUI"
-			FrameCloseUI_1.Parent = BackgroundCloseUI_1
-			FrameCloseUI_1.AnchorPoint = Vector2.new(0, 1)
-			FrameCloseUI_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
-			FrameCloseUI_1.BackgroundTransparency = 0.8999999761581421
-			FrameCloseUI_1.BorderColor3 = Color3.fromRGB(0,0,0)
-			FrameCloseUI_1.BorderSizePixel = 0
-			FrameCloseUI_1.Position = UDim2.new(0, 0,1, 0)
-			FrameCloseUI_1.Size = UDim2.new(1, 0,0, 4)
-
-			Title_1.Name = "Title"
-			Title_1.Parent = BackgroundCloseUI_1
-			Title_1.AutomaticSize = Enum.AutomaticSize.Y
-			Title_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
-			Title_1.BackgroundTransparency = 1
-			Title_1.BorderColor3 = Color3.fromRGB(0,0,0)
-			Title_1.BorderSizePixel = 0
-			Title_1.Size = UDim2.new(1, 0,1, 0)
-			Title_1.Font = Enum.Font.GothamBold
-			Title_1.Text = CloseUI.Text
-			Title_1.TextColor3 = Color3.fromRGB(255,255,255)
-			Title_1.TextSize = 12
-
-			addToTheme('Text & Icon', Title_1)
-
-			CloseUIShadow.Size = UDim2.new(0, Title_1.TextBounds.X + 40,0, 40)
-
-			local Click = click(CloseUIShadow)
-			lak(Click, CloseUIShadow)
-			Click.MouseButton1Click:Connect(function()
-				tw({v = Title_1, t = 0.15, s = Enum.EasingStyle.Back, d = "Out", g = {TextSize = Title_1.TextSize - 2}}):Play()
-				delay(.06, function()
-					tw({v = Title_1, t = 0.15, s = Enum.EasingStyle.Back, d = "Out", g = {TextSize = 12}}):Play()
-				end)
-				pcall(closeui)
-			end)
-		end
+    local Click = click(CloseUIShadow)
+    lak(Click, CloseUIShadow)
+    Click.MouseButton1Click:Connect(function()
+        tw({v = CloseIcon, t = 0.15, s = Enum.EasingStyle.Back, d = "Out", g = {Size = UDim2.new(0, 20, 0, 20)}}):Play()
+        delay(0.06, function()
+            tw({v = CloseIcon, t = 0.15, s = Enum.EasingStyle.Back, d = "Out", g = {Size = UDim2.new(0, 24, 0, 24)}}):Play()
+        end)
+        pcall(closeui)
+    end)
+end
 	end
 
 	return Tabs
