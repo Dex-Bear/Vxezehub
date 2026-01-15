@@ -2,7 +2,6 @@ local placeId = game. PlaceId
 if placeId == 2753915549 or placeId == 4442272183 or placeId == 7449423635 then
 --Blox Fruits
 repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
-getgenv().Team = "Marines"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/refs/heads/main/Skidlamcho.txt"))()
 elseif placeId == 116495829188952 or placeId == 70876832253163 then
 --DeadRails
