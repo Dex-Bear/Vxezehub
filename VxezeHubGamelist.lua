@@ -1,5 +1,5 @@
 local placeId = game. PlaceId
-if placeId == 2753915549 or placeId == 4442272183 or placeId == 7449423635 then
+if placeId == 85211729168715 or placeId == 79091703265657 or placeId == 100117331123089 then
 --Blox Fruits
 repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/refs/heads/main/Skidlamcho.txt"))()
