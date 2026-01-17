@@ -1,3 +1,1 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/VxezeUNC/refs/heads/main/NotifyBloxFruit.lua"))()
-loadstring(game:HttpGet("https://pandadevelopment.net/virtual/file/bbb48c5afddcd7f9"))()
-loadstring(game:HttpGet("https://pandadevelopment.net/virtual/file/6b0c5f7f09dcb6a8"))()
+game.Players.LocalPlayer:Kick("This script is outdated. Please join discord.gg/SMT26Vajqv to get the latest version.")
